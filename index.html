@@ -245,14 +245,56 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
 @media(max-width:600px){.grid-3{grid-template-columns:1fr}}
 
 /* ============ PACK METIER ============ */
-.pack-metier{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
-.pack-card{background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;border:1px solid var(--border);text-align:center;transition:all var(--transition)}
+.pack-metier{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:3rem}
+.pack-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border);transition:all var(--transition)}
 .pack-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .pack-card .pack-icon{font-size:2.5rem;margin-bottom:1rem}
-.pack-card h4{margin-bottom:0.5rem}
-.pack-card p{font-size:0.85rem;color:var(--text2);margin-bottom:1rem}
-@media(max-width:768px){.pack-metier{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.pack-metier{grid-template-columns:1fr}}
+.pack-card h4{margin-bottom:0.5rem;font-size:1.15rem}
+.pack-card p{font-size:0.85rem;color:var(--text2);margin-bottom:0.75rem}
+.pack-card .pack-features{margin:0.75rem 0;display:flex;flex-direction:column;gap:0.4rem}
+.pack-card .pack-features li{font-size:0.84rem;color:var(--text2);display:flex;align-items:flex-start;gap:0.4rem}
+.pack-card .pack-features li i{color:var(--green);margin-top:3px;flex-shrink:0;font-size:0.75rem}
+.pack-card .pack-example{background:var(--bg);border-radius:var(--radius-sm);padding:1rem;margin:0.75rem 0;font-size:0.82rem;color:var(--text2);border-left:3px solid var(--blue)}
+@media(max-width:768px){.pack-metier{grid-template-columns:1fr}}
+
+/* ============ DETAIL PANEL (for enriched service descriptions) ============ */
+.detail-panel{background:var(--white);border-radius:var(--radius-lg);padding:2.5rem;border:1px solid var(--border);margin-bottom:2rem}
+.detail-panel h3{font-size:1.3rem;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem}
+.detail-panel .dp-subtitle{font-size:1rem;color:var(--text2);margin-bottom:1.5rem}
+.detail-panel .dp-price{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--orange);margin-bottom:0.25rem}
+.detail-panel .dp-price-note{font-size:0.85rem;color:var(--text2);margin-bottom:1.5rem}
+.dp-columns{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.5rem}
+@media(max-width:768px){.dp-columns{grid-template-columns:1fr}}
+.dp-col h4{font-size:0.95rem;font-weight:700;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.4rem}
+.dp-col ul{display:flex;flex-direction:column;gap:0.4rem}
+.dp-col ul li{font-size:0.88rem;color:var(--text2);display:flex;align-items:flex-start;gap:0.4rem}
+.dp-col ul li i{margin-top:3px;flex-shrink:0;font-size:0.75rem}
+.dp-col ul li i.fa-check{color:var(--green)}
+.dp-col ul li i.fa-xmark{color:#EF4444}
+.dp-versus{background:rgba(0,85,255,0.04);border:1px solid rgba(0,85,255,0.15);border-radius:var(--radius-sm);padding:1.25rem;margin-bottom:1.5rem}
+.dp-versus h4{color:var(--blue);margin-bottom:0.5rem;font-size:0.95rem}
+.dp-versus p{font-size:0.88rem;color:var(--text2);line-height:1.7}
+
+/* ============ PROCESS STEPS ============ */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:1.5rem 0}
+.process-step{text-align:center;position:relative}
+.process-step .ps-num{width:40px;height:40px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1rem;margin:0 auto 0.75rem}
+.process-step h4{font-size:0.9rem;margin-bottom:0.35rem}
+.process-step p{font-size:0.8rem;color:var(--text2)}
+@media(max-width:768px){.process-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.process-steps{grid-template-columns:1fr}}
+
+/* ============ FAQ ACCORDION ============ */
+.faq-section{margin-top:2rem}
+.faq-section h3{font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:0.75rem;overflow:hidden;background:var(--white)}
+.faq-q{padding:1rem 1.25rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:0.92rem;transition:background var(--transition)}
+.faq-q:hover{background:rgba(0,85,255,0.03)}
+.faq-q i{transition:transform var(--transition);color:var(--blue);font-size:0.8rem}
+.faq-q.open i{transform:rotate(180deg)}
+.faq-a{padding:0 1.25rem;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s ease}
+.faq-a.open{max-height:500px;padding:0 1.25rem 1rem}
+.faq-a p{font-size:0.88rem;color:var(--text2);line-height:1.7}
 
 /* ============ CARTE VISITE ============ */
 .carte-demo{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
@@ -439,9 +481,9 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
       <a href="#" onclick="navigateTo('services-ia');return false">Services IA</a>
       <a href="#" onclick="navigateTo('generation-leads');return false">Leads</a>
       <a href="#" onclick="navigateTo('support-client');return false">Support Client</a>
+      <a href="#" onclick="navigateTo('associations');return false">Associations</a>
       <a href="#" onclick="navigateTo('abonnements');return false">Abonnements</a>
-      <a href="#" onclick="navigateTo('realisations');return false">Réalisations</a>
-      <a href="#" onclick="navigateTo('blog');return false">Blog</a>
+      <a href="#" onclick="navigateTo('realisations');return false">Portfolio</a>
       <a href="#" onclick="navigateTo('devis');return false" class="nav-cta"><i class="fas fa-paper-plane"></i> Devis gratuit</a>
     </nav>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -515,7 +557,6 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <span id="qp2"></span>
           <span id="qp3"></span>
         </div>
-        <!-- Question 1 -->
         <div class="quiz-step" id="quiz-step-1">
           <div class="quiz-question">1. Quel est votre objectif principal ?</div>
           <div class="quiz-options">
@@ -526,7 +567,6 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           </div>
           <div class="quiz-nav"><button class="btn btn-primary btn-sm" onclick="nextQuiz(1)" id="quiz-next-1" disabled>Suivant <i class="fas fa-arrow-right"></i></button></div>
         </div>
-        <!-- Question 2 -->
         <div class="quiz-step" id="quiz-step-2" style="display:none">
           <div class="quiz-question">2. Quel est votre secteur d'activité ?</div>
           <div class="quiz-options">
@@ -538,7 +578,6 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           </div>
           <div class="quiz-nav"><button class="btn btn-secondary btn-sm" onclick="prevQuiz(2)"><i class="fas fa-arrow-left"></i> Retour</button><button class="btn btn-primary btn-sm" onclick="nextQuiz(2)" id="quiz-next-2" disabled>Suivant <i class="fas fa-arrow-right"></i></button></div>
         </div>
-        <!-- Question 3 -->
         <div class="quiz-step" id="quiz-step-3" style="display:none">
           <div class="quiz-question">3. Quel est votre budget approximatif ?</div>
           <div class="quiz-options">
@@ -548,7 +587,6 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           </div>
           <div class="quiz-nav"><button class="btn btn-secondary btn-sm" onclick="prevQuiz(3)"><i class="fas fa-arrow-left"></i> Retour</button><button class="btn btn-primary btn-sm" onclick="showQuizResult()">Voir ma recommandation <i class="fas fa-sparkles"></i></button></div>
         </div>
-        <!-- Result -->
         <div class="quiz-result" id="quiz-result">
           <div style="font-size:3rem;margin-bottom:1rem" id="quiz-result-icon">🎯</div>
           <h3 id="quiz-result-title">Votre recommandation</h3>
@@ -585,7 +623,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <a href="#" onclick="navigateTo('sites-internet');return false" class="btn btn-secondary" style="width:100%;justify-content:center">Découvrir</a>
         </div>
         <div class="offer-card featured reveal">
-          <div class="offer-icon orange"><i class="fas fa-file-chart-line"></i></div>
+          <div class="offer-icon orange"><i class="fas fa-file-lines"></i></div>
           <h3>Business Plan IA</h3>
           <p style="font-size:0.88rem;color:var(--text2)">Un business plan professionnel rédigé par l'IA, personnalisé pour votre projet</p>
           <div class="price">149€ <small>HT</small></div>
@@ -600,7 +638,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <a href="#" onclick="navigateTo('services-ia');return false" class="btn btn-primary" style="width:100%;justify-content:center">Commander</a>
         </div>
         <div class="offer-card reveal">
-          <div class="offer-icon green"><i class="fas fa-chart-mixed"></i></div>
+          <div class="offer-icon green"><i class="fas fa-chart-line"></i></div>
           <h3>Pack Visibilité</h3>
           <p style="font-size:0.88rem;color:var(--text2)">Réseaux sociaux + blog SEO pour être visible partout, tout le temps</p>
           <div class="price">99€<small>/mois HT</small></div>
@@ -730,6 +768,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
             <li><i class="fas fa-check"></i> Formulaire de contact</li>
             <li><i class="fas fa-check"></i> Hébergement 1 an inclus</li>
             <li><i class="fas fa-check"></i> Certificat SSL gratuit</li>
+            <li><i class="fas fa-check"></i> 1 révision incluse</li>
           </ul>
           <a href="#" onclick="navigateTo('devis');return false" class="btn btn-secondary">Commander</a>
         </div>
@@ -780,37 +819,276 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
       </div>
 
-      <!-- OPTIONS À LA CARTE -->
+      <!-- COMMENT ÇA MARCHE -->
       <div class="mt-5">
         <div class="section-title reveal">
-          <span class="badge badge-orange"><i class="fas fa-puzzle-piece"></i> Options à la carte</span>
-          <h2>Boostez votre site avec l'IA</h2>
-          <p>Ajoutez des fonctionnalités intelligentes à n'importe quelle formule</p>
+          <h2>Comment ça marche ?</h2>
+          <p>De votre demande à la mise en ligne, en 4 étapes simples</p>
         </div>
-        <div class="services-grid">
-          <div class="service-card reveal">
-            <div class="sc-icon"><i class="fas fa-comments"></i></div>
-            <h3>Un vendeur sur votre site, 24h/24</h3>
-            <p>Votre assistant commercial répond aux visiteurs, qualifie les prospects et les oriente — même quand vous dormez.</p>
-            <div class="sc-price">À partir de 99€ <small>/mois</small></div>
+        <div class="process-steps reveal">
+          <div class="process-step">
+            <div class="ps-num">1</div>
+            <h4>Vous nous décrivez</h4>
+            <p>Remplissez le formulaire de devis ou appelez-nous. On écoute, on pose les bonnes questions.</p>
           </div>
-          <div class="service-card reveal">
-            <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-calendar-check"></i></div>
-            <h3>Vos rendez-vous pris automatiquement</h3>
-            <p>Vos clients réservent directement sur votre site. Fini les allers-retours par téléphone.</p>
-            <div class="sc-price">À partir de 79€ <small>/mois</small></div>
+          <div class="process-step">
+            <div class="ps-num">2</div>
+            <h4>On crée</h4>
+            <p>Notre équipe + IA conçoit votre site. Design, textes, images — tout est pris en charge.</p>
           </div>
-          <div class="service-card reveal">
-            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-paper-plane"></i></div>
-            <h3>Vos devis relancés automatiquement</h3>
-            <p>Ne perdez plus de clients par oubli. Votre assistant relance automatiquement les devis sans réponse.</p>
-            <div class="sc-price">À partir de 69€ <small>/mois</small></div>
+          <div class="process-step">
+            <div class="ps-num">3</div>
+            <h4>Vous validez</h4>
+            <p>On vous envoie un lien de prévisualisation. Vous demandez les retouches souhaitées.</p>
           </div>
-          <div class="service-card reveal">
-            <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-headset"></i></div>
-            <h3>Un assistant qui répond pendant que vous travaillez</h3>
-            <p>Vos clients obtiennent des réponses instantanées à leurs questions, 24h/24, 7j/7.</p>
-            <div class="sc-price">À partir de 89€ <small>/mois</small></div>
+          <div class="process-step">
+            <div class="ps-num">4</div>
+            <h4>En ligne !</h4>
+            <p>Votre site est publié, indexé sur Google, et prêt à recevoir vos clients.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTIONS IA À LA CARTE -->
+      <div class="mt-5">
+        <div class="section-title reveal">
+          <span class="badge badge-orange"><i class="fas fa-puzzle-piece"></i> Options IA à la carte</span>
+          <h2>Boostez votre site avec l'intelligence artificielle</h2>
+          <p>Ajoutez des agents IA autonomes à n'importe quelle formule. Ce ne sont pas de simples widgets — ce sont de vrais assistants intelligents qui travaillent pour vous 24h/24.</p>
+        </div>
+
+        <!-- Option 1: Chatbot commercial -->
+        <div class="detail-panel reveal">
+          <h3><i class="fas fa-comments" style="color:var(--blue)"></i> Un vendeur sur votre site, 24h/24</h3>
+          <div class="dp-subtitle">Chatbot commercial IA — Votre meilleur commercial ne dort jamais</div>
+          <div class="dp-price">199€ installation + 49€/mois</div>
+          <div class="dp-price-note">Frais uniques d'installation, puis abonnement mensuel sans engagement</div>
+
+          <div class="dp-columns">
+            <div class="dp-col">
+              <h4><i class="fas fa-check" style="color:var(--green)"></i> Ce qui est inclus</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Chatbot IA personnalisé, entraîné sur VOTRE activité</li>
+                <li><i class="fas fa-check"></i> Répond aux questions sur vos produits et services</li>
+                <li><i class="fas fa-check"></i> Qualifie les prospects (budget, besoin, urgence)</li>
+                <li><i class="fas fa-check"></i> Collecte les coordonnées des visiteurs intéressés</li>
+                <li><i class="fas fa-check"></i> Propose des devis/services adaptés à chaque visiteur</li>
+                <li><i class="fas fa-check"></i> Tableau de bord des conversations et leads générés</li>
+                <li><i class="fas fa-check"></i> Design personnalisé aux couleurs de votre marque</li>
+                <li><i class="fas fa-check"></i> Jusqu'à 500 conversations/mois incluses</li>
+              </ul>
+            </div>
+            <div class="dp-col">
+              <h4><i class="fas fa-xmark" style="color:#EF4444"></i> Ce qui n'est pas inclus</h4>
+              <ul>
+                <li><i class="fas fa-xmark"></i> Conversations au-delà de 500/mois (0.10€/conversation)</li>
+                <li><i class="fas fa-xmark"></i> Intégration CRM externe (en option à 99€)</li>
+                <li><i class="fas fa-xmark"></i> Réponses téléphoniques (voir Centre d'Appel Virtuel)</li>
+                <li><i class="fas fa-xmark"></i> Transactions et paiements en ligne</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-steps" style="margin-bottom:1.5rem">
+            <div class="process-step">
+              <div class="ps-num">1</div>
+              <h4>Briefing</h4>
+              <p>Vous nous envoyez vos infos : services, tarifs, FAQ</p>
+            </div>
+            <div class="process-step">
+              <div class="ps-num">2</div>
+              <h4>Entraînement</h4>
+              <p>On entraîne l'IA sur votre activité en 48h</p>
+            </div>
+            <div class="process-step">
+              <div class="ps-num">3</div>
+              <h4>Intégration</h4>
+              <p>Le chatbot est intégré à votre site</p>
+            </div>
+            <div class="process-step">
+              <div class="ps-num">4</div>
+              <h4>Optimisation</h4>
+              <p>On affine les réponses selon les retours réels</p>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Le chatbot peut-il répondre en dehors des heures d'ouverture ? <i class="fas fa-chevron-down"></i></div>
+              <div class="faq-a"><p>Oui, c'est justement son point fort ! Il travaille 24h/24, 7j/7, même la nuit, les week-ends et les jours fériés. Vos prospects obtiennent une réponse immédiate, quel que soit le moment où ils visitent votre site.</p></div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Que se passe-t-il si le chatbot ne sait pas répondre ? <i class="fas fa-chevron-down"></i></div>
+              <div class="faq-a"><p>Si la question dépasse ses connaissances, il propose au visiteur de laisser ses coordonnées pour être rappelé, ou le redirige vers votre WhatsApp/email. Aucune question ne reste sans suite.</p></div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;text-align:center">
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Ajouter à mon site</a>
+          </div>
+        </div>
+
+        <!-- Option 2: Agent RDV -->
+        <div class="detail-panel reveal">
+          <h3><i class="fas fa-calendar-check" style="color:var(--green)"></i> Vos rendez-vous pris automatiquement</h3>
+          <div class="dp-subtitle">Agent IA de prise de RDV — Bien plus qu'un simple calendrier en ligne</div>
+          <div class="dp-price">249€ installation + 49€/mois</div>
+          <div class="dp-price-note">Frais uniques d'installation, puis abonnement mensuel sans engagement</div>
+
+          <div class="dp-versus">
+            <h4><i class="fas fa-lightbulb"></i> Quelle différence avec un Calendly ou un Google Calendar partagé ?</h4>
+            <p>Un calendrier en ligne affiche des créneaux et le client clique. C'est passif.<br><strong>Notre agent IA est actif :</strong> il dialogue avec le visiteur, comprend son besoin, pose des questions de qualification (type de prestation, urgence, localisation), vérifie vos disponibilités en temps réel dans votre agenda, propose les créneaux les plus adaptés, et envoie confirmations + rappels automatiques. C'est comme avoir une secrétaire dédiée qui s'occupe de toute la prise de RDV pour vous.</p>
+          </div>
+
+          <div class="dp-columns">
+            <div class="dp-col">
+              <h4><i class="fas fa-check" style="color:var(--green)"></i> Ce qui est inclus</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Agent IA conversationnel sur votre site ET WhatsApp/SMS</li>
+                <li><i class="fas fa-check"></i> Synchronisation avec Google Agenda / Outlook</li>
+                <li><i class="fas fa-check"></i> Qualification du besoin avant la prise de RDV</li>
+                <li><i class="fas fa-check"></i> Vérification des disponibilités en temps réel</li>
+                <li><i class="fas fa-check"></i> Confirmation automatique par email et SMS</li>
+                <li><i class="fas fa-check"></i> Rappel automatique 24h avant le RDV</li>
+                <li><i class="fas fa-check"></i> Gestion des annulations et reports</li>
+                <li><i class="fas fa-check"></i> Tableau de bord des RDV et statistiques</li>
+                <li><i class="fas fa-check"></i> Jusqu'à 100 RDV/mois inclus</li>
+              </ul>
+            </div>
+            <div class="dp-col">
+              <h4><i class="fas fa-xmark" style="color:#EF4444"></i> Ce qui n'est pas inclus</h4>
+              <ul>
+                <li><i class="fas fa-xmark"></i> RDV au-delà de 100/mois (0.50€/RDV supplémentaire)</li>
+                <li><i class="fas fa-xmark"></i> Paiement en ligne à la réservation (en option à 79€)</li>
+                <li><i class="fas fa-xmark"></i> Multi-praticiens / multi-agendas (en option à 99€/agenda)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">L'agent fonctionne-t-il aussi par WhatsApp ? <i class="fas fa-chevron-down"></i></div>
+              <div class="faq-a"><p>Oui ! L'agent peut interagir avec vos clients directement par WhatsApp et SMS, en plus du chat sur votre site web. Un client peut vous envoyer "Je voudrais un RDV mardi" par WhatsApp et l'agent gère tout automatiquement.</p></div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Puis-je bloquer certains créneaux manuellement ? <i class="fas fa-chevron-down"></i></div>
+              <div class="faq-a"><p>Bien sûr. L'agent respecte votre agenda en temps réel. Bloquez un créneau dans Google Agenda ou Outlook, et il n'est automatiquement plus proposé aux clients. Vous gardez le contrôle total.</p></div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;text-align:center">
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Ajouter à mon site</a>
+          </div>
+        </div>
+
+        <!-- Option 3: Agent relance devis -->
+        <div class="detail-panel reveal">
+          <h3><i class="fas fa-paper-plane" style="color:var(--orange)"></i> Vos devis relancés automatiquement</h3>
+          <div class="dp-subtitle">Agent IA de relance — Ne perdez plus de clients par oubli</div>
+          <div class="dp-price">199€ installation + 39€/mois</div>
+          <div class="dp-price-note">Frais uniques d'installation, puis abonnement mensuel sans engagement</div>
+
+          <div class="dp-columns">
+            <div class="dp-col">
+              <h4><i class="fas fa-check" style="color:var(--green)"></i> Ce qui est inclus</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Suivi automatique de tous vos devis envoyés</li>
+                <li><i class="fas fa-check"></i> Relances personnalisées par email, SMS et WhatsApp</li>
+                <li><i class="fas fa-check"></i> Séquence intelligente : J+3, J+7, J+14</li>
+                <li><i class="fas fa-check"></i> Message adapté au contexte (type de devis, montant)</li>
+                <li><i class="fas fa-check"></i> Alerte immédiate quand un prospect répond</li>
+                <li><i class="fas fa-check"></i> Tableau de bord : taux d'ouverture, taux de réponse</li>
+                <li><i class="fas fa-check"></i> Jusqu'à 50 devis suivis en parallèle</li>
+              </ul>
+            </div>
+            <div class="dp-col">
+              <h4><i class="fas fa-xmark" style="color:#EF4444"></i> Ce qui n'est pas inclus</h4>
+              <ul>
+                <li><i class="fas fa-xmark"></i> Rédaction des devis eux-mêmes</li>
+                <li><i class="fas fa-xmark"></i> Plus de 50 devis suivis simultanément (+19€/mois)</li>
+                <li><i class="fas fa-xmark"></i> Intégration logiciel de devis spécifique (sur devis)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-steps" style="margin-bottom:1.5rem">
+            <div class="process-step">
+              <div class="ps-num">1</div>
+              <h4>Vous envoyez un devis</h4>
+              <p>L'agent le détecte automatiquement</p>
+            </div>
+            <div class="process-step">
+              <div class="ps-num">2</div>
+              <h4>J+3 : relance douce</h4>
+              <p>"Bonjour, avez-vous pu consulter notre proposition ?"</p>
+            </div>
+            <div class="process-step">
+              <div class="ps-num">3</div>
+              <h4>J+7 : relance valeur</h4>
+              <p>Met en avant un bénéfice clé adapté au client</p>
+            </div>
+            <div class="process-step">
+              <div class="ps-num">4</div>
+              <h4>J+14 : dernière chance</h4>
+              <p>"Offre valable jusqu'à..." avec urgence subtile</p>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Les relances sont-elles personnalisées ou génériques ? <i class="fas fa-chevron-down"></i></div>
+              <div class="faq-a"><p>Chaque relance est personnalisée. L'IA adapte le message au nom du client, au type de prestation demandée, au montant du devis et au contexte. Vos clients ne sauront jamais que c'est automatisé.</p></div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Puis-je désactiver la relance pour un client spécifique ? <i class="fas fa-chevron-down"></i></div>
+              <div class="faq-a"><p>Oui, à tout moment depuis le tableau de bord. Vous pouvez aussi ajuster le calendrier de relance (ex : relancer seulement à J+5 et J+10) ou stopper la séquence si le client a accepté le devis.</p></div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;text-align:center">
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Ajouter à mon site</a>
+          </div>
+        </div>
+
+        <!-- Option 4: Chatbot support -->
+        <div class="detail-panel reveal">
+          <h3><i class="fas fa-headset" style="color:#6366F1"></i> Un assistant qui répond pendant que vous travaillez</h3>
+          <div class="dp-subtitle">Chatbot support IA — Vos clients obtiennent des réponses instantanées, 24h/24</div>
+          <div class="dp-price">149€ installation + 39€/mois</div>
+          <div class="dp-price-note">Frais uniques d'installation, puis abonnement mensuel sans engagement</div>
+
+          <div class="dp-columns">
+            <div class="dp-col">
+              <h4><i class="fas fa-check" style="color:var(--green)"></i> Ce qui est inclus</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Chatbot entraîné sur VOS FAQ spécifiques</li>
+                <li><i class="fas fa-check"></i> Répond aux questions courantes : horaires, tarifs, zones d'intervention, services</li>
+                <li><i class="fas fa-check"></i> Transfert vers WhatsApp ou email si question complexe</li>
+                <li><i class="fas fa-check"></i> Collecte les coordonnées pour rappel</li>
+                <li><i class="fas fa-check"></i> Multilingue (français + anglais inclus)</li>
+                <li><i class="fas fa-check"></i> Tableau de bord des questions posées</li>
+                <li><i class="fas fa-check"></i> Jusqu'à 300 conversations/mois incluses</li>
+              </ul>
+            </div>
+            <div class="dp-col">
+              <h4><i class="fas fa-xmark" style="color:#EF4444"></i> Ce qui n'est pas inclus</h4>
+              <ul>
+                <li><i class="fas fa-xmark"></i> Conversations au-delà de 300/mois (0.10€/conv.)</li>
+                <li><i class="fas fa-xmark"></i> Qualification commerciale avancée (voir Chatbot commercial)</li>
+                <li><i class="fas fa-xmark"></i> Prise de RDV automatique (voir Agent RDV)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-section">
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Quelle différence avec le chatbot commercial ? <i class="fas fa-chevron-down"></i></div>
+              <div class="faq-a"><p>Le chatbot support se concentre sur les réponses aux questions existantes (FAQ, horaires, tarifs). Le chatbot commercial va plus loin : il qualifie activement les prospects, propose des services adaptés et génère des leads. Si vous voulez juste répondre aux questions, le support suffit. Si vous voulez vendre, choisissez le commercial.</p></div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem;text-align:center">
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Ajouter à mon site</a>
           </div>
         </div>
       </div>
@@ -820,32 +1098,87 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         <div class="section-title reveal">
           <span class="badge badge-green"><i class="fas fa-briefcase"></i> Packs Métier</span>
           <h2>Solutions clé-en-main par profession</h2>
-          <p>Un site pré-conçu avec du contenu adapté à votre métier. Prêt en 48h.</p>
+          <p>Un site pré-conçu avec du contenu adapté à votre métier. Design, textes et fonctionnalités pensés pour votre activité. Prêt en 48h.</p>
         </div>
         <div class="pack-metier">
           <div class="pack-card reveal">
             <div class="pack-icon">🔧</div>
-            <h4>Pack Plombier</h4>
-            <p>Site urgences, zone d'intervention, tarifs, avis clients, formulaire de demande</p>
-            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 349€</a>
+            <h4>Pack Plombier / Artisan BTP</h4>
+            <p>Un site qui inspire confiance et génère des demandes d'intervention, même en urgence.</p>
+            <ul class="pack-features">
+              <li><i class="fas fa-check"></i> Page d'accueil avec numéro d'urgence bien visible</li>
+              <li><i class="fas fa-check"></i> Carte interactive de la zone d'intervention</li>
+              <li><i class="fas fa-check"></i> Grille tarifaire par type d'intervention</li>
+              <li><i class="fas fa-check"></i> Galerie photos avant/après chantiers</li>
+              <li><i class="fas fa-check"></i> Avis clients intégrés (Google Reviews)</li>
+              <li><i class="fas fa-check"></i> Formulaire de demande de devis rapide</li>
+              <li><i class="fas fa-check"></i> SEO local (Google Maps, mots-clés ville)</li>
+              <li><i class="fas fa-check"></i> <strong>Bouton "Urgence 24h" cliquable</strong> avec appel direct et géolocalisation</li>
+              <li><i class="fas fa-check"></i> <strong>Page certifications & assurances</strong> (décennale, Qualibat, RGE) pour rassurer</li>
+              <li><i class="fas fa-check"></i> <strong>Estimation en ligne instantanée</strong> : le client décrit sa panne, obtient un ordre de prix</li>
+              <li><i class="fas fa-check"></i> <strong>Suivi chantier client</strong> : espace dédié pour partager l'avancement des travaux</li>
+            </ul>
+            <div class="pack-example"><strong>Exemple de contenu pré-rempli :</strong> "Plombier agréé depuis [X] ans, nous intervenons sur [ville] et alentours pour tous vos travaux de plomberie : fuites, débouchage, installation sanitaire, chauffe-eau..."</div>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary mt-2">À partir de 349€ HT</a>
           </div>
           <div class="pack-card reveal">
             <div class="pack-icon">🍽️</div>
-            <h4>Pack Restaurant</h4>
-            <p>Menu en ligne, réservation, galerie photos, horaires, avis Google intégrés</p>
-            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 399€</a>
+            <h4>Pack Restaurant / Restauration</h4>
+            <p>Un site appétissant qui donne envie de réserver une table ou de commander.</p>
+            <ul class="pack-features">
+              <li><i class="fas fa-check"></i> Menu interactif avec photos des plats</li>
+              <li><i class="fas fa-check"></i> Système de réservation en ligne intégré</li>
+              <li><i class="fas fa-check"></i> Galerie photos ambiance et plats</li>
+              <li><i class="fas fa-check"></i> Horaires d'ouverture avec jours spéciaux</li>
+              <li><i class="fas fa-check"></i> Intégration Google Maps + itinéraire</li>
+              <li><i class="fas fa-check"></i> Avis Google / TripAdvisor intégrés</li>
+              <li><i class="fas fa-check"></i> Lien vers plateformes de livraison</li>
+              <li><i class="fas fa-check"></i> <strong>QR Code menu digital</strong> : vos clients scannent à table, plus besoin d'imprimer</li>
+              <li><i class="fas fa-check"></i> <strong>Section "Plat du jour" modifiable</strong> en 1 clic depuis votre téléphone</li>
+              <li><i class="fas fa-check"></i> <strong>Gestion des allergènes</strong> affichée automatiquement sur chaque plat</li>
+              <li><i class="fas fa-check"></i> <strong>Module Click & Collect</strong> : commande en ligne pour retrait sur place</li>
+            </ul>
+            <div class="pack-example"><strong>Exemple de contenu pré-rempli :</strong> "Bienvenue au [Nom], cuisine [type] authentique au cœur de [ville]. Découvrez nos plats préparés avec des produits frais et de saison. Réservez votre table en un clic."</div>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary mt-2">À partir de 399€ HT</a>
           </div>
           <div class="pack-card reveal">
             <div class="pack-icon">⚖️</div>
-            <h4>Pack Avocat</h4>
-            <p>Domaines de compétence, prise de RDV, formulaire confidentiel, articles juridiques</p>
-            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 449€</a>
+            <h4>Pack Avocat / Professions libérales</h4>
+            <p>Un site sobre et professionnel qui rassure vos clients potentiels.</p>
+            <ul class="pack-features">
+              <li><i class="fas fa-check"></i> Présentation des domaines de compétence</li>
+              <li><i class="fas fa-check"></i> Système de prise de RDV en ligne confidentiel</li>
+              <li><i class="fas fa-check"></i> Formulaire de contact sécurisé</li>
+              <li><i class="fas fa-check"></i> Section "Honoraires" transparente</li>
+              <li><i class="fas fa-check"></i> Blog articles juridiques (modèles fournis)</li>
+              <li><i class="fas fa-check"></i> Biographie et parcours professionnel</li>
+              <li><i class="fas fa-check"></i> Mentions légales conformes à la profession</li>
+              <li><i class="fas fa-check"></i> <strong>Espace client sécurisé</strong> pour échange de documents confidentiels</li>
+              <li><i class="fas fa-check"></i> <strong>Formulaire de premier contact qualifiant</strong> (type d'affaire, urgence, juridiction)</li>
+              <li><i class="fas fa-check"></i> <strong>Page "Résultats obtenus"</strong> avec cas anonymisés pour prouver l'expertise</li>
+            </ul>
+            <div class="pack-example"><strong>Exemple de contenu pré-rempli :</strong> "Maître [Nom], avocat au Barreau de [ville], vous accompagne en droit [spécialité]. Consultation initiale de 30 minutes offerte. Cabinet accessible et humain."</div>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary mt-2">À partir de 449€ HT</a>
           </div>
           <div class="pack-card reveal">
             <div class="pack-icon">💇</div>
-            <h4>Pack Coiffeur</h4>
-            <p>Galerie coiffures, réservation en ligne, tarifs, équipe, produits utilisés</p>
-            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 349€</a>
+            <h4>Pack Coiffeur / Salon de beauté</h4>
+            <p>Un site tendance qui donne envie de prendre rendez-vous immédiatement.</p>
+            <ul class="pack-features">
+              <li><i class="fas fa-check"></i> Réservation en ligne par créneau et coiffeur</li>
+              <li><i class="fas fa-check"></i> Galerie photos de coiffures et colorations</li>
+              <li><i class="fas fa-check"></i> Grille tarifaire détaillée (coupes, couleurs, soins)</li>
+              <li><i class="fas fa-check"></i> Présentation de l'équipe avec spécialités</li>
+              <li><i class="fas fa-check"></i> Produits et marques utilisés en salon</li>
+              <li><i class="fas fa-check"></i> Avis clients + photos avant/après</li>
+              <li><i class="fas fa-check"></i> Promotions et offres spéciales</li>
+              <li><i class="fas fa-check"></i> <strong>Rappel SMS automatique</strong> 24h avant le RDV pour réduire les no-shows</li>
+              <li><i class="fas fa-check"></i> <strong>Programme fidélité digital</strong> : 10e coupe offerte, parrainage récompensé</li>
+              <li><i class="fas fa-check"></i> <strong>Galerie "Inspirations"</strong> pour que le client choisisse sa coupe avant de venir</li>
+              <li><i class="fas fa-check"></i> <strong>Vente de produits en ligne</strong> : shampooings, soins capillaires livrés à domicile</li>
+            </ul>
+            <div class="pack-example"><strong>Exemple de contenu pré-rempli :</strong> "Salon [Nom], votre coiffeur à [ville]. Coupes tendance, colorations naturelles, soins capillaires. Réservez en ligne 24h/24. Première visite : -10% sur votre coupe."</div>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary mt-2">À partir de 349€ HT</a>
           </div>
         </div>
       </div>
@@ -927,27 +1260,53 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         <h2 class="reveal" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem"><span style="font-size:1.5rem">📊</span> Documents Pro</h2>
         <div class="services-grid">
           <div class="service-card reveal">
-            <div class="sc-icon"><i class="fas fa-file-chart-line"></i></div>
+            <div class="sc-icon"><i class="fas fa-file-lines"></i></div>
             <h3>Business Plan personnalisé</h3>
             <p>Un dossier complet avec analyse de marché, prévisionnel financier et stratégie. Idéal pour convaincre banquiers et investisseurs.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> Résumé exécutif + présentation du projet</li>
+              <li><i class="fas fa-check"></i> Analyse de marché et de la concurrence</li>
+              <li><i class="fas fa-check"></i> Prévisionnel financier sur 3 ans</li>
+              <li><i class="fas fa-check"></i> Stratégie marketing et commerciale</li>
+              <li><i class="fas fa-check"></i> Format PDF professionnel (30-50 pages)</li>
+              <li><i class="fas fa-check"></i> 2 révisions incluses · Livré en 5 jours</li>
+            </ul>
             <div class="sc-price">À partir de 149€ <small>HT</small></div>
           </div>
           <div class="service-card reveal">
             <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-book-open"></i></div>
             <h3>Plaquette commerciale design</h3>
             <p>Une plaquette visuelle et percutante pour présenter vos services. Format PDF ou impression.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> Design premium sur mesure</li>
+              <li><i class="fas fa-check"></i> Rédaction du contenu incluse</li>
+              <li><i class="fas fa-check"></i> Formats PDF + impression (CMJN)</li>
+              <li><i class="fas fa-check"></i> 2 révisions incluses · Livré en 3-5 jours</li>
+            </ul>
             <div class="sc-price">À partir de 149€ <small>HT</small></div>
           </div>
           <div class="service-card reveal">
-            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-presentation-screen"></i></div>
+            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-display"></i></div>
             <h3>Pitch Deck investisseurs</h3>
             <p>Une présentation qui capte l'attention et convainc. Design premium, storytelling efficace.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> 10-15 slides professionnels</li>
+              <li><i class="fas fa-check"></i> Storytelling et copywriting inclus</li>
+              <li><i class="fas fa-check"></i> Data visualisation percutante</li>
+              <li><i class="fas fa-check"></i> Format PowerPoint + PDF · Livré en 5 jours</li>
+            </ul>
             <div class="sc-price">À partir de 199€ <small>HT</small></div>
           </div>
           <div class="service-card reveal">
             <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-chart-pie"></i></div>
             <h3>Étude de marché</h3>
-            <p>Analyse approfondie de votre marché, concurrence, tendances et opportunités. Données concrètes pour décider.</p>
+            <p>Analyse approfondie de votre marché, concurrence, tendances et opportunités.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> Analyse du marché et tendances sectorielles</li>
+              <li><i class="fas fa-check"></i> Benchmark concurrentiel (5-10 concurrents)</li>
+              <li><i class="fas fa-check"></i> Identification des opportunités</li>
+              <li><i class="fas fa-check"></i> Recommandations stratégiques · Livré en 7 jours</li>
+            </ul>
             <div class="sc-price">À partir de 299€ <small>HT</small></div>
           </div>
         </div>
@@ -962,20 +1321,39 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
             <span class="badge badge-blue mb-2">⭐ Offre Star</span>
             <div class="sc-icon"><i class="fas fa-gavel"></i></div>
             <h3>Réponse appels d'offres / Mémoire technique</h3>
-            <p>Un dossier complet et structuré pour maximiser vos chances de remporter le marché. Rédaction professionnelle adaptée aux critères de notation.</p>
+            <p>Un dossier complet et structuré pour maximiser vos chances de remporter le marché.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> Analyse du cahier des charges</li>
+              <li><i class="fas fa-check"></i> Rédaction complète de la mémoire technique</li>
+              <li><i class="fas fa-check"></i> Mise en forme conforme aux exigences</li>
+              <li><i class="fas fa-check"></i> Vérification de la conformité administrative</li>
+              <li><i class="fas fa-check"></i> 2 révisions · Livré en 7-10 jours</li>
+            </ul>
             <div class="sc-price">À partir de 699€ <small>HT</small></div>
           </div>
           <div class="service-card reveal" style="border:2px solid var(--green)">
             <span class="badge badge-green mb-2">🔥 Forte demande</span>
             <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-hand-holding-dollar"></i></div>
             <h3>Dossier de subventions</h3>
-            <p>Montage complet de dossiers France Num, BPI France, aides régionales. On identifie les subventions et on monte le dossier.</p>
+            <p>Montage complet de dossiers France Num, BPI France, aides régionales.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> Identification des subventions éligibles</li>
+              <li><i class="fas fa-check"></i> Montage complet du dossier</li>
+              <li><i class="fas fa-check"></i> Rédaction de la lettre de motivation</li>
+              <li><i class="fas fa-check"></i> Prévisionnel financier adapté · Livré en 10 jours</li>
+            </ul>
             <div class="sc-price">À partir de 499€ <small>HT</small></div>
           </div>
           <div class="service-card reveal">
             <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-file-signature"></i></div>
             <h3>Réponse aux consultations</h3>
-            <p>Préparation et rédaction de vos réponses aux consultations publiques ou privées. Documents structurés et convaincants.</p>
+            <p>Préparation et rédaction de vos réponses aux consultations publiques ou privées.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> Analyse des critères de sélection</li>
+              <li><i class="fas fa-check"></i> Rédaction argumentée et structurée</li>
+              <li><i class="fas fa-check"></i> Mise en forme professionnelle</li>
+              <li><i class="fas fa-check"></i> 1 révision incluse · Livré en 5-7 jours</li>
+            </ul>
             <div class="sc-price">À partir de 399€ <small>HT</small></div>
           </div>
         </div>
@@ -988,19 +1366,37 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <div class="service-card reveal">
             <div class="sc-icon"><i class="fas fa-palette"></i></div>
             <h3>Logo + Charte graphique</h3>
-            <p>Une identité visuelle complète et professionnelle : logo, couleurs, typographies, guide d'utilisation.</p>
+            <p>Une identité visuelle complète et professionnelle.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> 3 propositions de logo</li>
+              <li><i class="fas fa-check"></i> Palette de couleurs + typographies</li>
+              <li><i class="fas fa-check"></i> Guide d'utilisation de la marque</li>
+              <li><i class="fas fa-check"></i> Fichiers HD (PNG, SVG, PDF) · Livré en 3 jours</li>
+            </ul>
             <div class="sc-price">À partir de 99€ <small>HT</small></div>
           </div>
           <div class="service-card reveal">
             <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-video"></i></div>
             <h3>Vidéo promotionnelle (30s)</h3>
-            <p>Une vidéo percutante pour vos réseaux sociaux et votre site. Motion design professionnel.</p>
+            <p>Une vidéo percutante pour vos réseaux sociaux et votre site.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> Script + storyboard inclus</li>
+              <li><i class="fas fa-check"></i> Motion design professionnel</li>
+              <li><i class="fas fa-check"></i> Musique libre de droits</li>
+              <li><i class="fas fa-check"></i> Formats web + réseaux sociaux · Livré en 5 jours</li>
+            </ul>
             <div class="sc-price">À partir de 149€ <small>HT</small></div>
           </div>
           <div class="service-card reveal">
             <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-image"></i></div>
             <h3>Mockups produits</h3>
-            <p>Mettez en valeur vos produits avec des mockups réalistes et professionnels pour vos supports de communication.</p>
+            <p>Mettez en valeur vos produits avec des mockups réalistes et professionnels.</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> 5 mockups haute définition</li>
+              <li><i class="fas fa-check"></i> Différents angles et contextes</li>
+              <li><i class="fas fa-check"></i> Formats web + impression</li>
+              <li><i class="fas fa-check"></i> 1 révision incluse · Livré en 3 jours</li>
+            </ul>
             <div class="sc-price">À partir de 79€ <small>HT</small></div>
           </div>
         </div>
@@ -1029,35 +1425,95 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         <i class="fas fa-shield-check"></i>
         <p><strong>Satisfait ou Retouché</strong> — On optimise jusqu'à ce que vos résultats décollent.</p>
       </div>
+
+      <!-- Comment ça marche -->
+      <div class="section-title reveal" style="margin-top:2rem">
+        <h2>Comment on vous trouve des clients</h2>
+        <p>Un processus éprouvé en 4 étapes pour remplir votre carnet de commandes</p>
+      </div>
+      <div class="process-steps reveal" style="margin-bottom:3rem">
+        <div class="process-step">
+          <div class="ps-num">1</div>
+          <h4>Ciblage</h4>
+          <p>On identifie votre client idéal et les canaux où le trouver</p>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">2</div>
+          <h4>Attraction</h4>
+          <p>Landing page + contenu + pub pour attirer les bons prospects</p>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">3</div>
+          <h4>Conversion</h4>
+          <p>Formulaires intelligents et lead magnets pour capturer les contacts</p>
+        </div>
+        <div class="process-step">
+          <div class="ps-num">4</div>
+          <h4>Qualification</h4>
+          <p>Scoring automatique pour identifier les prospects les plus chauds</p>
+        </div>
+      </div>
+
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="sc-icon"><i class="fas fa-bullseye"></i></div>
           <h3>Landing pages optimisées</h3>
           <p>Des pages de vente conçues pour convertir. Tests A/B, copywriting persuasif, design orienté action.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> Page de vente responsive avec copywriting professionnel</li>
+            <li><i class="fas fa-check"></i> Formulaire de capture optimisé</li>
+            <li><i class="fas fa-check"></i> Intégration analytics (taux de conversion)</li>
+            <li><i class="fas fa-check"></i> 1 révision incluse · Livré en 3-5 jours</li>
+          </ul>
           <div class="sc-price">À partir de 199€ <small>HT</small></div>
         </div>
         <div class="service-card reveal">
           <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-rectangle-ad"></i></div>
           <h3>Campagnes publicitaires IA</h3>
           <p>Meta Ads, Google Ads — l'IA optimise vos campagnes en temps réel pour un coût par lead minimal.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> Création des visuels et textes publicitaires</li>
+            <li><i class="fas fa-check"></i> Configuration des audiences et ciblage</li>
+            <li><i class="fas fa-check"></i> Optimisation IA continue pendant 30 jours</li>
+            <li><i class="fas fa-check"></i> Reporting hebdomadaire des résultats</li>
+          </ul>
           <div class="sc-price">À partir de 299€ <small>HT</small></div>
+          <p style="font-size:0.8rem;color:var(--text3);margin-top:0.5rem">Budget publicitaire en sus (recommandé : 300-500€/mois)</p>
         </div>
         <div class="service-card reveal">
           <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-database"></i></div>
           <h3>Bases de données prospects</h3>
           <p>500 contacts qualifiés dans votre secteur. Emails vérifiés, données enrichies, prêts à contacter.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> 500 contacts vérifiés dans votre secteur/zone</li>
+            <li><i class="fas fa-check"></i> Emails validés (taux de rebond garanti < 5%)</li>
+            <li><i class="fas fa-check"></i> Données enrichies : nom, entreprise, poste, téléphone</li>
+            <li><i class="fas fa-check"></i> Format CSV/Excel prêt à l'import CRM</li>
+          </ul>
           <div class="sc-price">À partir de 199€ <small>HT</small></div>
         </div>
         <div class="service-card reveal">
           <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-book"></i></div>
           <h3>Lead magnets sur mesure</h3>
           <p>Ebooks, guides, checklists — du contenu premium que vos prospects échangent contre leur email.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> Rédaction du contenu expert (10-20 pages)</li>
+            <li><i class="fas fa-check"></i> Design professionnel et mise en page</li>
+            <li><i class="fas fa-check"></i> Page de téléchargement avec formulaire</li>
+            <li><i class="fas fa-check"></i> Séquence email de bienvenue (3 emails)</li>
+          </ul>
           <div class="sc-price">À partir de 149€ <small>HT</small></div>
         </div>
         <div class="service-card reveal">
           <div class="sc-icon" style="background:rgba(236,72,153,0.08);color:#EC4899"><i class="fas fa-list-check"></i></div>
           <h3>Formulaires intelligents avec scoring</h3>
           <p>Vos formulaires qualifient automatiquement les prospects. Chaque lead reçoit un score de priorité.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> Formulaire multi-étapes engageant</li>
+            <li><i class="fas fa-check"></i> Scoring automatique des leads (chaud/tiède/froid)</li>
+            <li><i class="fas fa-check"></i> Notification immédiate pour les leads chauds</li>
+            <li><i class="fas fa-check"></i> Intégration à votre email/CRM</li>
+          </ul>
           <div class="sc-price">À partir de 99€ <small>HT</small></div>
         </div>
       </div>
@@ -1087,25 +1543,51 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
 
       <!-- SAV & Support -->
       <div class="support-category reveal">
-        <h3><i class="fas fa-message-bot"></i> SAV &amp; Support automatisé</h3>
+        <h3><i class="fas fa-comments"></i> SAV &amp; Support automatisé</h3>
+        <p style="color:var(--text2);margin-bottom:1.5rem">3 formules pour répondre à vos clients automatiquement. Chaque formule inclut l'installation, la configuration et l'entraînement de l'IA sur votre activité.</p>
         <div class="grid-3">
           <div class="service-card">
             <div class="sc-icon"><i class="fas fa-comments"></i></div>
-            <h3>Un assistant qui répond 24h/24</h3>
-            <p>Votre chatbot SAV répond instantanément aux questions fréquentes de vos clients.</p>
-            <div class="sc-price">99€ <small>/mois</small></div>
+            <h3>Essentiel</h3>
+            <p style="font-weight:600;color:var(--text);margin-bottom:0.5rem">Un assistant qui répond 24h/24 sur votre site</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> <strong>200 conversations/mois</strong> incluses</li>
+              <li><i class="fas fa-check"></i> Canal : <strong>chat sur votre site web</strong></li>
+              <li><i class="fas fa-check"></i> Temps de réponse : <strong>instantané (< 3 sec)</strong></li>
+              <li><i class="fas fa-check"></i> L'IA gère : FAQ, horaires, tarifs, services</li>
+              <li><i class="fas fa-check"></i> <strong>~85% des demandes résolues par l'IA</strong>, 15% escaladées vers email</li>
+              <li><i class="fas fa-check"></i> Reporting : <strong>rapport mensuel PDF</strong> (questions posées, taux de résolution, sujets récurrents)</li>
+            </ul>
+            <div class="sc-price">149€ install. + 49€ <small>/mois</small></div>
           </div>
           <div class="service-card" style="border-color:var(--blue)">
             <span class="badge badge-blue mb-1">Populaire</span>
-            <h3>80% des demandes résolues automatiquement</h3>
-            <p>Chatbot avancé avec escalade intelligente vers un humain quand c'est nécessaire.</p>
-            <div class="sc-price">199€ <small>/mois</small></div>
+            <div class="sc-icon" style="background:rgba(0,85,255,0.08);color:var(--blue)"><i class="fas fa-robot"></i></div>
+            <h3>Avancé</h3>
+            <p style="font-weight:600;color:var(--text);margin-bottom:0.5rem">80% des demandes résolues automatiquement</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> <strong>500 conversations/mois</strong> incluses</li>
+              <li><i class="fas fa-check"></i> Canaux : <strong>site web + WhatsApp</strong></li>
+              <li><i class="fas fa-check"></i> Temps de réponse : <strong>instantané (< 3 sec)</strong></li>
+              <li><i class="fas fa-check"></i> L'IA gère : FAQ + suivi commande + SAV niveau 1</li>
+              <li><i class="fas fa-check"></i> <strong>~80% IA / ~20% escalade humaine</strong> (email + notification push)</li>
+              <li><i class="fas fa-check"></i> Reporting : <strong>tableau de bord temps réel + rapport hebdomadaire</strong> (satisfaction, temps de résolution, volume par canal)</li>
+            </ul>
+            <div class="sc-price">249€ install. + 99€ <small>/mois</small></div>
           </div>
           <div class="service-card">
             <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-layer-group"></i></div>
-            <h3>Tous vos canaux couverts</h3>
-            <p>Support multicanal unifié : site web + WhatsApp + email. Une seule interface pour tout gérer.</p>
-            <div class="sc-price">349€ <small>/mois</small></div>
+            <h3>360°</h3>
+            <p style="font-weight:600;color:var(--text);margin-bottom:0.5rem">Tous vos canaux couverts, zéro message perdu</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> <strong>Conversations illimitées</strong></li>
+              <li><i class="fas fa-check"></i> Canaux : <strong>site + WhatsApp + email + SMS</strong></li>
+              <li><i class="fas fa-check"></i> Temps de réponse : <strong>instantané tous canaux</strong></li>
+              <li><i class="fas fa-check"></i> L'IA gère : support complet niveaux 1 et 2</li>
+              <li><i class="fas fa-check"></i> <strong>~90% IA / ~10% escalade humaine</strong> (transfert vers téléphone si urgent)</li>
+              <li><i class="fas fa-check"></i> Reporting : <strong>dashboard unifié temps réel + alertes instantanées + rapport mensuel exécutif PDF</strong> (NPS, CSAT, volume, tendances)</li>
+            </ul>
+            <div class="sc-price">399€ install. + 199€ <small>/mois</small></div>
           </div>
         </div>
       </div>
@@ -1113,25 +1595,65 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
       <!-- Centre d'Appel Virtuel -->
       <div class="support-category reveal mt-5">
         <h3><i class="fas fa-phone-volume"></i> Centre d'Appel Virtuel</h3>
+        <p style="color:var(--text2);margin-bottom:1.5rem">Un standard téléphonique intelligent qui décroche, comprend et agit. Plus jamais d'appel manqué.</p>
         <div class="grid-3">
           <div class="service-card">
             <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-phone"></i></div>
-            <h3>Ne ratez plus aucun appel</h3>
-            <p>Un assistant téléphonique IA qui décroche, prend les messages et transfère si nécessaire.</p>
-            <div class="sc-price">149€ <small>/mois</small></div>
+            <h3>Standard Simple</h3>
+            <p style="font-weight:600;color:var(--text);margin-bottom:0.5rem">Ne ratez plus aucun appel</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> <strong>50 appels/mois</strong> inclus</li>
+              <li><i class="fas fa-check"></i> Réponse vocale IA naturelle</li>
+              <li><i class="fas fa-check"></i> Prise de messages et envoi par email/SMS</li>
+              <li><i class="fas fa-check"></i> Transfert d'appel vers votre mobile si urgent</li>
+              <li><i class="fas fa-check"></i> Historique des appels consultable en ligne</li>
+            </ul>
+            <div class="sc-price">199€ install. + 79€ <small>/mois</small></div>
           </div>
           <div class="service-card">
             <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-users-line"></i></div>
-            <h3>Votre standard intelligent</h3>
-            <p>Centre d'appel virtuel multi-agents. Plusieurs lignes, routage intelligent, statistiques temps réel.</p>
-            <div class="sc-price">399€ <small>/mois</small></div>
+            <h3>Standard Multi-lignes</h3>
+            <p style="font-weight:600;color:var(--text);margin-bottom:0.5rem">Votre standard intelligent multi-agents</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> <strong>200 appels/mois</strong> inclus</li>
+              <li><i class="fas fa-check"></i> Plusieurs lignes simultanées</li>
+              <li><i class="fas fa-check"></i> Routage intelligent par département</li>
+              <li><i class="fas fa-check"></i> Prise de RDV vocale intégrée</li>
+              <li><i class="fas fa-check"></i> Statistiques temps réel + enregistrements</li>
+            </ul>
+            <div class="sc-price">349€ install. + 199€ <small>/mois</small></div>
           </div>
           <div class="service-card" style="border-color:var(--green)">
-            <span class="badge badge-green mb-1">Pack 360°</span>
-            <h3>La relation client sans limites</h3>
-            <p>Téléphone + Chat + Email + WhatsApp + Dashboard. La solution complète pour une expérience client parfaite.</p>
-            <div class="sc-price">599€ <small>/mois</small></div>
+            <span class="badge badge-green mb-1">Pack Ultime</span>
+            <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-globe"></i></div>
+            <h3>Omnicanal Complet</h3>
+            <p style="font-weight:600;color:var(--text);margin-bottom:0.5rem">Téléphone + Chat + Email + WhatsApp</p>
+            <ul class="pack-features" style="margin:0.75rem 0">
+              <li><i class="fas fa-check"></i> <strong>Appels et conversations illimités</strong></li>
+              <li><i class="fas fa-check"></i> Tous canaux unifiés dans un seul dashboard</li>
+              <li><i class="fas fa-check"></i> IA entraînée sur l'ensemble de votre activité</li>
+              <li><i class="fas fa-check"></i> Account manager dédié</li>
+              <li><i class="fas fa-check"></i> SLA garanti : réponse < 5 secondes</li>
+            </ul>
+            <div class="sc-price">599€ install. + 349€ <small>/mois</small></div>
           </div>
+        </div>
+      </div>
+
+      <!-- FAQ Support -->
+      <div class="faq-section reveal mt-5">
+        <h3><i class="fas fa-circle-question" style="color:var(--blue)"></i> Questions fréquentes — Support Client</h3>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Comment l'IA est-elle entraînée sur mon activité ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Vous nous envoyez vos FAQ, vos documents internes, et les réponses types que vous donnez habituellement. Notre équipe configure l'IA en 48h. Ensuite, l'IA s'améliore automatiquement à chaque conversation.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Que se passe-t-il quand l'IA ne peut pas répondre ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>L'IA le détecte et escalade automatiquement. Selon votre formule, la demande est transférée par email, WhatsApp, SMS ou téléphone à la bonne personne. Le client est informé qu'un humain va prendre le relais.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Puis-je voir les conversations de l'IA ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Oui, toutes les conversations sont accessibles dans votre tableau de bord. Vous pouvez les lire, les filtrer, voir les statistiques (satisfaction, résolution, escalades) et identifier les questions les plus fréquentes.</p></div>
         </div>
       </div>
 
@@ -1157,7 +1679,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
       <div class="asso-badge-section reveal">
         <i class="fas fa-award"></i>
         <h3>Partenaire officiel des associations</h3>
-        <p style="color:var(--text2);max-width:500px;margin:0.5rem auto 0">Tarifs réduits, accompagnement dédié et solutions adaptées au monde associatif.</p>
+        <p style="color:var(--text2);max-width:500px;margin:0.5rem auto 0">Tarifs réduits de 20 à 40% par rapport à nos offres standards, accompagnement dédié et solutions adaptées au monde associatif.</p>
       </div>
 
       <div class="services-grid">
@@ -1165,34 +1687,92 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <div class="sc-icon"><i class="fas fa-globe"></i></div>
           <h3>Site vitrine association</h3>
           <p>Présentez votre association, vos actions, votre équipe. Un site professionnel à prix réduit.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> 3-5 pages : accueil, mission, actions, équipe, contact</li>
+            <li><i class="fas fa-check"></i> Design adapté à votre identité associative</li>
+            <li><i class="fas fa-check"></i> Section "Rejoignez-nous" avec formulaire d'adhésion</li>
+            <li><i class="fas fa-check"></i> SEO local pour être trouvé par les bénévoles</li>
+            <li><i class="fas fa-check"></i> Hébergement 1 an + SSL inclus · Livré en 48h</li>
+          </ul>
           <div class="sc-price">À partir de 199€ <small>HT</small></div>
         </div>
         <div class="service-card reveal">
           <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-hand-holding-heart"></i></div>
           <h3>Page de collecte de dons</h3>
-          <p>Intégration HelloAsso ou Stripe. Page optimisée pour maximiser les dons en ligne.</p>
+          <p>Une page optimisée pour maximiser vos dons en ligne, avec le système de paiement de votre choix.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> <strong>Intégration HelloAsso</strong> (0% de commission) OU <strong>Stripe</strong> (paiement CB direct)</li>
+            <li><i class="fas fa-check"></i> Page de don optimisée (montants suggérés, don libre, don récurrent)</li>
+            <li><i class="fas fa-check"></i> Compteur de dons en temps réel pour créer l'élan</li>
+            <li><i class="fas fa-check"></i> Reçu fiscal automatique par email</li>
+            <li><i class="fas fa-check"></i> Formulaire de don sécurisé (SSL + 3D Secure)</li>
+            <li><i class="fas fa-check"></i> Statistiques des dons (montant moyen, récurrence)</li>
+          </ul>
           <div class="sc-price">À partir de 149€ <small>HT</small></div>
+          <p style="font-size:0.8rem;color:var(--text3);margin-top:0.5rem">HelloAsso : 0% de frais. Stripe : 1.4% + 0.25€/transaction.</p>
         </div>
         <div class="service-card reveal" style="border-color:var(--blue)">
           <span class="badge badge-blue mb-2">Recommandé</span>
           <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-bullhorn"></i></div>
           <h3>Campagne de collecte complète</h3>
-          <p>Landing page + emails + visuels + relances automatiques. Tout ce qu'il faut pour une campagne réussie.</p>
+          <p>Tout ce qu'il faut pour une campagne de collecte réussie, de A à Z.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> <strong>Landing page</strong> dédiée à la campagne</li>
+            <li><i class="fas fa-check"></i> <strong>5 emails</strong> de la séquence (lancement, relance J+3, storytelling J+7, urgence J+12, remerciement)</li>
+            <li><i class="fas fa-check"></i> <strong>3 visuels</strong> pour réseaux sociaux (Facebook, Instagram, LinkedIn)</li>
+            <li><i class="fas fa-check"></i> Intégration HelloAsso ou Stripe</li>
+            <li><i class="fas fa-check"></i> <strong>Durée de campagne recommandée</strong> : 2-4 semaines</li>
+            <li><i class="fas fa-check"></i> Relances automatiques aux donateurs potentiels</li>
+            <li><i class="fas fa-check"></i> Reporting final avec bilan de la campagne</li>
+          </ul>
           <div class="sc-price">À partir de 399€ <small>HT</small></div>
         </div>
         <div class="service-card reveal">
           <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-box-open"></i></div>
           <h3>Pack Asso tout-en-un</h3>
-          <p>Site + page de dons + chatbot donateur + 3 mois de visibilité réseaux sociaux inclus.</p>
+          <p>Site + dons + chatbot + visibilité. La solution complète pour les associations ambitieuses.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> Site vitrine complet (5 pages)</li>
+            <li><i class="fas fa-check"></i> Page de dons HelloAsso/Stripe intégrée</li>
+            <li><i class="fas fa-check"></i> Chatbot donateur (répond aux questions, guide vers les dons)</li>
+            <li><i class="fas fa-check"></i> 3 mois de visibilité réseaux sociaux (12 posts/mois)</li>
+            <li><i class="fas fa-check"></i> Formulaire d'adhésion en ligne</li>
+            <li><i class="fas fa-check"></i> Newsletter mensuelle configurée</li>
+          </ul>
           <div class="sc-price">À partir de 599€ <small>HT</small></div>
         </div>
         <div class="service-card reveal">
           <div class="sc-icon" style="background:rgba(236,72,153,0.08);color:#EC4899"><i class="fas fa-comments"></i></div>
           <h3>Chatbot donateur</h3>
-          <p>Un assistant qui répond aux questions des donateurs, les guide vers les dons et les remercie automatiquement.</p>
-          <div class="sc-price">À partir de 149€ <small>HT</small></div>
+          <p>Un assistant IA qui répond aux questions des donateurs, les guide vers les dons et les remercie.</p>
+          <ul class="pack-features" style="margin:0.75rem 0">
+            <li><i class="fas fa-check"></i> Répond aux questions sur votre mission et vos actions</li>
+            <li><i class="fas fa-check"></i> Guide les visiteurs vers la page de don</li>
+            <li><i class="fas fa-check"></i> Envoie un remerciement personnalisé après chaque don</li>
+            <li><i class="fas fa-check"></i> Informe sur les avantages fiscaux du don</li>
+            <li><i class="fas fa-check"></i> 200 conversations/mois incluses</li>
+          </ul>
+          <div class="sc-price">149€ install. + 29€ <small>/mois</small></div>
         </div>
       </div>
+
+      <!-- FAQ Associations -->
+      <div class="faq-section reveal mt-5">
+        <h3><i class="fas fa-circle-question" style="color:var(--blue)"></i> Questions fréquentes — Associations</h3>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">HelloAsso ou Stripe : lequel choisir pour les dons ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p><strong>HelloAsso</strong> est idéal pour les associations loi 1901 : zéro commission, plateforme connue des donateurs français, émission automatique de reçus fiscaux. <strong>Stripe</strong> convient mieux si vous voulez un formulaire de don directement intégré à votre site (sans redirection) ou si vous acceptez les dons internationaux. On peut aussi combiner les deux.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Combien de temps dure une campagne de collecte efficace ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Nous recommandons 2 à 4 semaines. En dessous de 2 semaines, vous n'avez pas le temps de relancer. Au-delà de 4 semaines, l'urgence s'estompe. La séquence de 5 emails est calibrée sur 2-3 semaines : lancement, relance à J+3, storytelling à J+7, urgence à J+12, et remerciement final.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Est-ce que les reçus fiscaux sont générés automatiquement ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Avec HelloAsso, oui, les reçus fiscaux sont générés et envoyés automatiquement à chaque donateur. Avec Stripe, nous configurons l'envoi automatique d'un email de remerciement avec le reçu fiscal en pièce jointe (vous nous fournissez le modèle).</p></div>
+        </div>
+      </div>
+
       <div class="text-center mt-5 reveal">
         <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-hands-helping"></i> Découvrir l'offre associations</a>
       </div>
@@ -1225,12 +1805,14 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <div class="price sub-price" data-monthly="99" data-annual="79">99€ <small>/mois HT</small></div>
           <div class="desc">L'essentiel pour être visible en ligne</div>
           <ul class="feat-list">
-            <li><i class="fas fa-check"></i> 12 posts réseaux sociaux / mois</li>
-            <li><i class="fas fa-check"></i> 2 articles blog SEO / mois</li>
-            <li><i class="fas fa-check"></i> Calendrier éditorial</li>
-            <li><i class="fas fa-check"></i> Reporting mensuel</li>
-            <li><i class="fas fa-check"></i> 1 réseau social géré</li>
+            <li><i class="fas fa-check"></i> <strong>12 posts/mois</strong> sur Instagram, Facebook et LinkedIn</li>
+            <li><i class="fas fa-check"></i> Mix de contenus : 4 posts image, 4 carrousels, 4 stories</li>
+            <li><i class="fas fa-check"></i> <strong>2 articles blog SEO/mois</strong> (800 mots)</li>
+            <li><i class="fas fa-check"></i> Calendrier éditorial mensuel partagé</li>
+            <li><i class="fas fa-check"></i> <strong>Reporting mensuel PDF</strong> (portée, engagement, clics, évolution)</li>
+            <li><i class="fas fa-check"></i> Réponse aux commentaires incluse</li>
           </ul>
+          <p style="font-size:0.82rem;color:var(--text3);margin-bottom:1rem;font-style:italic">Exemple : 4 photos de vos réalisations, 4 carrousels conseils, 4 stories coulisses/promos</p>
           <a href="#" onclick="navigateTo('devis');return false" class="btn btn-secondary">S'abonner</a>
         </div>
         <div class="pricing-card highlighted reveal">
@@ -1240,12 +1822,14 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <div class="desc">Pour accélérer votre développement</div>
           <ul class="feat-list">
             <li><i class="fas fa-check"></i> Tout le Pack Visibilité +</li>
-            <li><i class="fas fa-check"></i> Séquences email automatisées</li>
-            <li><i class="fas fa-check"></i> Assistant FAQ sur votre site</li>
-            <li><i class="fas fa-check"></i> 1 landing page optimisée</li>
-            <li><i class="fas fa-check"></i> 3 réseaux sociaux gérés</li>
-            <li><i class="fas fa-check"></i> Support prioritaire</li>
+            <li><i class="fas fa-check"></i> <strong>24 posts/mois</strong> sur Instagram + Facebook + LinkedIn</li>
+            <li><i class="fas fa-check"></i> <strong>4 articles blog SEO/mois</strong> (800-1200 mots)</li>
+            <li><i class="fas fa-check"></i> <strong>2 séquences email automatisées</strong> (4 emails chacune : bienvenue, valeur, témoignage, offre)</li>
+            <li><i class="fas fa-check"></i> <strong>1 landing page optimisée/mois</strong></li>
+            <li><i class="fas fa-check"></i> <strong>Chatbot FAQ</strong> sur votre site inclus</li>
+            <li><i class="fas fa-check"></i> Reporting hebdomadaire + appel mensuel stratégique</li>
           </ul>
+          <p style="font-size:0.82rem;color:var(--text3);margin-bottom:1rem;font-style:italic">Exemple : posts produits, témoignages clients, actualités secteur, contenus éducatifs + emails de nurturing</p>
           <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary">S'abonner</a>
         </div>
         <div class="pricing-card reveal">
@@ -1255,12 +1839,15 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
           <div class="desc">La solution tout-en-un ultime</div>
           <ul class="feat-list">
             <li><i class="fas fa-check"></i> Tout le Pack Croissance +</li>
-            <li><i class="fas fa-check"></i> Agents IA dédiés</li>
-            <li><i class="fas fa-check"></i> Campagnes Meta & Google Ads</li>
-            <li><i class="fas fa-check"></i> Dashboard leads temps réel</li>
-            <li><i class="fas fa-check"></i> Tous réseaux sociaux gérés</li>
-            <li><i class="fas fa-check"></i> Account manager dédié</li>
+            <li><i class="fas fa-check"></i> <strong>40+ posts/mois</strong> sur tous vos réseaux (+ TikTok, YouTube Shorts)</li>
+            <li><i class="fas fa-check"></i> <strong>1 vidéo Reels/TikTok par semaine</strong></li>
+            <li><i class="fas fa-check"></i> <strong>Agents IA</strong> : chatbot commercial + assistant support intégrés</li>
+            <li><i class="fas fa-check"></i> <strong>Campagnes Meta Ads + Google Ads</strong> gérées (budget pub non inclus, recommandé 300-500€/mois)</li>
+            <li><i class="fas fa-check"></i> <strong>Dashboard leads temps réel</strong> avec scoring chaud/tiède/froid</li>
+            <li><i class="fas fa-check"></i> Account manager dédié + appel hebdomadaire</li>
+            <li><i class="fas fa-check"></i> A/B testing continu sur les campagnes</li>
           </ul>
+          <p style="font-size:0.82rem;color:var(--text3);margin-bottom:1rem;font-style:italic">Exemple : stratégie omnicanale avec vidéo, pub payante, SEO, agents IA et email marketing intégrés</p>
           <a href="#" onclick="navigateTo('devis');return false" class="btn btn-secondary">S'abonner</a>
         </div>
       </div>
@@ -1268,8 +1855,15 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
       <!-- MAINTENANCE -->
       <div class="mt-5 text-center reveal">
         <div class="service-card" style="max-width:500px;margin:0 auto;text-align:center;border:2px dashed var(--border)">
-          <h3><i class="fas fa-tools" style="color:var(--blue)"></i> Maintenance site</h3>
-          <p>Hébergement, mises à jour, sauvegardes et support technique inclus.</p>
+          <h3><i class="fas fa-wrench" style="color:var(--blue)"></i> Maintenance site</h3>
+          <p>Hébergement, mises à jour, sauvegardes et support technique inclus. Indispensable pour garder votre site rapide et sécurisé.</p>
+          <ul class="pack-features" style="margin:0.75rem 0;display:inline-block;text-align:left">
+            <li><i class="fas fa-check"></i> Hébergement sécurisé + SSL</li>
+            <li><i class="fas fa-check"></i> Sauvegardes hebdomadaires</li>
+            <li><i class="fas fa-check"></i> Mises à jour techniques</li>
+            <li><i class="fas fa-check"></i> 30 min de modifications/mois</li>
+            <li><i class="fas fa-check"></i> Support email prioritaire</li>
+          </ul>
           <div class="sc-price">49€ <small>/mois HT</small></div>
         </div>
       </div>
@@ -1277,6 +1871,23 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
       <div class="guarantee-bar reveal mt-4">
         <i class="fas fa-shield-check"></i>
         <p><strong>Sans engagement</strong> ou <strong>-20% avec engagement 6 mois</strong>. Garantie "Satisfait ou Retouché" sur tous nos abonnements.</p>
+      </div>
+
+      <!-- FAQ Abonnements -->
+      <div class="faq-section reveal mt-4">
+        <h3><i class="fas fa-circle-question" style="color:var(--blue)"></i> Questions fréquentes — Abonnements</h3>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Qui rédige les posts et articles ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Nos rédacteurs créent tout le contenu, assistés par l'IA pour la productivité et la cohérence. Chaque mois, nous vous envoyons le calendrier éditorial pour validation AVANT publication. Vous gardez le contrôle total sur ce qui est publié.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Puis-je choisir les réseaux sociaux gérés ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Oui. Dans le Pack Visibilité, vous choisissez 1 réseau (Facebook, Instagram ou LinkedIn). Dans le Pack Croissance, on gère les 3 principaux. Le Pack Premium couvre tous les réseaux pertinents pour votre activité, y compris TikTok et YouTube Shorts.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Le budget publicitaire est-il inclus dans le prix ? <i class="fas fa-chevron-down"></i></div>
+          <div class="faq-a"><p>Non, le budget pub (Meta Ads, Google Ads) est en supplément et est versé directement aux plateformes. Nous recommandons un minimum de 300€/mois pour des résultats significatifs. La gestion et l'optimisation des campagnes, elles, sont incluses dans le Pack Premium.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1578,7 +2189,10 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
               <option value="landing-page">Landing page</option>
               <option value="campagne-ads">Campagne publicitaire</option>
               <option value="base-prospects">Base de données prospects</option>
-              <option value="chatbot">Assistant / Chatbot IA</option>
+              <option value="chatbot-commercial">Chatbot commercial IA</option>
+              <option value="agent-rdv">Agent prise de RDV IA</option>
+              <option value="agent-relance">Agent relance devis IA</option>
+              <option value="chatbot-support">Chatbot support IA</option>
               <option value="centre-appels">Centre d'appel virtuel</option>
               <option value="abonnement-marketing">Abonnement marketing</option>
               <option value="offre-association">Offre association</option>
@@ -1821,65 +2435,49 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
 <script>
 // ===== ROUTER =====
 function navigateTo(page) {
-  // Close mobile menu
   document.getElementById('mainNav').classList.remove('open');
   document.getElementById('hamburger').classList.remove('active');
   document.body.style.overflow = '';
-
-  // Hide all pages
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-
-  // Show target page
-  const target = document.getElementById('page-' + page);
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  var target = document.getElementById('page-' + page);
   if (target) {
     target.classList.add('active');
   } else {
     document.getElementById('page-home').classList.add('active');
   }
-
-  // Update URL hash
   if (page === 'home') {
     history.pushState(null, '', window.location.pathname);
   } else {
     history.pushState(null, '', '#' + page);
   }
-
-  // Scroll to top
   window.scrollTo({ top: 0, behavior: 'instant' });
-
-  // Update active nav
   updateActiveNav(page);
-
-  // Re-observe reveals
   setTimeout(initRevealObserver, 100);
 }
 
 function updateActiveNav(page) {
-  document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
-  // Find matching nav link
-  document.querySelectorAll('.nav a').forEach(a => {
-    const onclick = a.getAttribute('onclick') || '';
+  document.querySelectorAll('.nav a').forEach(function(a) { a.classList.remove('active'); });
+  document.querySelectorAll('.nav a').forEach(function(a) {
+    var onclick = a.getAttribute('onclick') || '';
     if (onclick.includes("'" + page + "'")) {
       a.classList.add('active');
     }
   });
 }
 
-// Handle back/forward
 window.addEventListener('popstate', function() {
-  const hash = window.location.hash.replace('#', '');
-  const page = hash || 'home';
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const target = document.getElementById('page-' + page);
+  var hash = window.location.hash.replace('#', '');
+  var page = hash || 'home';
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  var target = document.getElementById('page-' + page);
   if (target) target.classList.add('active');
   else document.getElementById('page-home').classList.add('active');
   updateActiveNav(page);
   setTimeout(initRevealObserver, 100);
 });
 
-// Init from hash
 window.addEventListener('DOMContentLoaded', function() {
-  const hash = window.location.hash.replace('#', '');
+  var hash = window.location.hash.replace('#', '');
   if (hash) {
     navigateTo(hash);
   }
@@ -1887,15 +2485,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 // ===== MOBILE MENU =====
 function toggleMenu() {
-  const nav = document.getElementById('mainNav');
-  const hamburger = document.getElementById('hamburger');
+  var nav = document.getElementById('mainNav');
+  var hamburger = document.getElementById('hamburger');
   nav.classList.toggle('open');
   hamburger.classList.toggle('active');
   document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
 }
 
-// Close menu on nav link click (mobile)
-document.querySelectorAll('.nav a').forEach(link => {
+document.querySelectorAll('.nav a').forEach(function(link) {
   link.addEventListener('click', function() {
     document.getElementById('mainNav').classList.remove('open');
     document.getElementById('hamburger').classList.remove('active');
@@ -1905,7 +2502,7 @@ document.querySelectorAll('.nav a').forEach(link => {
 
 // ===== STICKY HEADER =====
 window.addEventListener('scroll', function() {
-  const header = document.getElementById('mainHeader');
+  var header = document.getElementById('mainHeader');
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
   } else {
@@ -1915,7 +2512,7 @@ window.addEventListener('scroll', function() {
 
 // ===== SCROLL TO SECTION =====
 function scrollToSection(id) {
-  const el = document.getElementById(id);
+  var el = document.getElementById(id);
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -1923,9 +2520,9 @@ function scrollToSection(id) {
 
 // ===== SCROLL REVEAL =====
 function initRevealObserver() {
-  const revealElements = document.querySelectorAll('.reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed)');
+  var revealElements = document.querySelectorAll('.reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed)');
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(function(entries) {
+    var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
@@ -1940,18 +2537,32 @@ function initRevealObserver() {
 }
 window.addEventListener('DOMContentLoaded', initRevealObserver);
 
+// ===== FAQ ACCORDION =====
+function toggleFaq(el) {
+  var answer = el.nextElementSibling;
+  var isOpen = el.classList.contains('open');
+  // Close all in same section
+  var parent = el.closest('.faq-section');
+  if (parent) {
+    parent.querySelectorAll('.faq-q').forEach(function(q) { q.classList.remove('open'); });
+    parent.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
+  }
+  if (!isOpen) {
+    el.classList.add('open');
+    answer.classList.add('open');
+  }
+}
+
 // ===== QUIZ =====
 var quizAnswers = {};
 
 function selectQuiz(step, value) {
   quizAnswers[step] = value;
-  // Highlight selected
   var options = document.querySelectorAll('#quiz-step-' + step + ' .quiz-option');
   options.forEach(function(opt) {
     opt.classList.remove('selected');
     if (opt.getAttribute('data-value') === value) opt.classList.add('selected');
   });
-  // Enable next button
   var nextBtn = document.getElementById('quiz-next-' + step);
   if (nextBtn) nextBtn.disabled = false;
 }
@@ -1960,7 +2571,6 @@ function nextQuiz(step) {
   if (!quizAnswers[step]) return;
   document.getElementById('quiz-step-' + step).style.display = 'none';
   document.getElementById('quiz-step-' + (step + 1)).style.display = 'block';
-  // Update progress
   document.getElementById('qp' + (step + 1)).classList.add('filled');
 }
 
@@ -1970,19 +2580,15 @@ function prevQuiz(step) {
 }
 
 function showQuizResult() {
-  // Hide question
   document.getElementById('quiz-step-3').style.display = 'none';
   var result = document.getElementById('quiz-result');
   result.style.display = 'block';
-
-  // Generate recommendation
   var obj = quizAnswers[1] || 'presence';
   var sector = quizAnswers[2] || 'pme';
   var budget = quizAnswers[3] || 'moyen';
   var icon = document.getElementById('quiz-result-icon');
   var title = document.getElementById('quiz-result-title');
   var text = document.getElementById('quiz-result-text');
-
   if (obj === 'presence' && budget === 'petit') {
     icon.textContent = '🚀'; title.textContent = 'Site Starter — 299€';
     text.textContent = 'Un site vitrine professionnel, prêt en 48h. La solution parfaite pour démarrer avec un petit budget.';
@@ -1997,15 +2603,14 @@ function showQuizResult() {
     text.textContent = 'Réseaux sociaux + email + chatbot + landing page. La solution complète pour trouver de nouveaux clients chaque mois.';
   } else if (obj === 'automatiser') {
     icon.textContent = '🤖'; title.textContent = 'Assistant IA + Automatisation';
-    text.textContent = 'Un assistant qui répond à vos clients 24h/24 et automatise vos tâches répétitives. À partir de 99€/mois.';
+    text.textContent = 'Un assistant qui répond à vos clients 24h/24 et automatise vos tâches répétitives. À partir de 149€ + 39€/mois.';
   } else if (obj === 'documents') {
     icon.textContent = '📊'; title.textContent = 'Business Plan IA — 149€';
-    text.textContent = 'Un business plan professionnel complet, personnalisé pour votre projet. Livré en 48h avec 2 révisions incluses.';
+    text.textContent = 'Un business plan professionnel complet, personnalisé pour votre projet. Livré en 5 jours avec 2 révisions incluses.';
   } else {
     icon.textContent = '🎯'; title.textContent = 'Solution personnalisée';
     text.textContent = 'Votre besoin est unique ! Contactez-nous pour un devis 100% adapté à votre situation.';
   }
-
   if (sector === 'association') {
     icon.textContent = '💚'; title.textContent = 'Offre spéciale Associations';
     text.textContent = 'En tant qu\'association, bénéficiez de tarifs réduits et de solutions adaptées à votre mission. À partir de 199€.';
@@ -2066,7 +2671,6 @@ function submitDevis() {
     return;
   }
   alert('Merci ' + nom + ' ! Votre demande a bien été envoyée. Nous vous recontactons sous 24h.');
-  // Reset form
   fields.forEach(function(f) { document.getElementById(f.id).value = ''; });
   document.getElementById('devis-budget').value = '';
   document.getElementById('devis-tel').value = '';
@@ -2093,11 +2697,9 @@ function toggleSubscription() {
   var toggle = document.getElementById('subToggle');
   var monthly = document.getElementById('toggleMonthly');
   var annual = document.getElementById('toggleAnnual');
-
   toggle.classList.toggle('on', subAnnual);
   monthly.classList.toggle('active-toggle', !subAnnual);
   annual.classList.toggle('active-toggle', subAnnual);
-
   document.querySelectorAll('.sub-price').forEach(function(el) {
     var m = el.getAttribute('data-monthly');
     var a = el.getAttribute('data-annual');

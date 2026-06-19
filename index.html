@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SiteRapide — Votre site professionnel en 48h, boosté par l'IA. Sites internet, services IA, génération de leads pour TPE, artisans, PME et associations.">
+<meta name="keywords" content="site internet rapide, création site web, IA business, TPE PME, site professionnel 48h">
+<meta name="author" content="SiteRapide">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="SiteRapide — Votre site pro en 48h, boosté par l'IA">
+<meta property="og:description" content="Sites internet professionnels, services IA et marketing digital pour TPE, artisans, PME et associations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://siterapide.fr">
+<title>SiteRapide — Votre site pro en 48h, boosté par l'IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ============ RESET & BASE ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--blue:#0055FF;--blue-dark:#0038AA;--dark:#0A1628;--dark2:#111D30;
+--green:#00D4AA;--orange:#FF6B2C;--orange-dark:#E55A1F;
+--bg:#F5F7FA;--white:#FFFFFF;--card:#FFFFFF;
+--text:#1A202C;--text2:#64748B;--text3:#94A3B8;
+--border:#E2E8F0;--shadow:0 4px 24px rgba(10,22,40,0.08);
+--shadow-lg:0 12px 40px rgba(10,22,40,0.12);
+--radius:12px;--radius-sm:8px;--radius-lg:16px;
+--transition:0.3s cubic-bezier(0.4,0,0.2,1);
+--max-w:1200px;--font:'Inter',system-ui,-apple-system,sans-serif;
+--font-display:'Space Grotesk','Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit;transition:color var(--transition)}
+ul{list-style:none}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1.25rem}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.2}
+h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800}
+h2{font-size:clamp(1.5rem,3.5vw,2.5rem);font-weight:700}
+h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
+.section-title{text-align:center;margin-bottom:3rem}
+.section-title h2{margin-bottom:0.75rem}
+.section-title p{color:var(--text2);max-width:600px;margin:0 auto;font-size:1.05rem}
+.badge{display:inline-block;padding:0.35rem 0.85rem;border-radius:50px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.badge-blue{background:rgba(0,85,255,0.1);color:var(--blue)}
+.badge-green{background:rgba(0,212,170,0.1);color:#00A888}
+.badge-orange{background:rgba(255,107,44,0.1);color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 1.75rem;border-radius:var(--radius-sm);font-weight:600;font-size:0.95rem;border:none;cursor:pointer;transition:all var(--transition);font-family:var(--font)}
+.btn-primary{background:var(--orange);color:var(--white)}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,107,44,0.35)}
+.btn-secondary{background:var(--white);color:var(--blue);border:2px solid var(--blue)}
+.btn-secondary:hover{background:var(--blue);color:var(--white);transform:translateY(-2px)}
+.btn-dark{background:var(--dark);color:var(--white)}
+.btn-dark:hover{background:var(--dark2);transform:translateY(-2px)}
+.btn-sm{padding:0.6rem 1.25rem;font-size:0.85rem}
+.btn-lg{padding:1rem 2.25rem;font-size:1.05rem}
+
+/* ============ HEADER ============ */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);transition:all var(--transition)}
+.header.scrolled{background:rgba(10,22,40,0.98);box-shadow:0 4px 20px rgba(0,0,0,0.15)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0;max-width:var(--max-w);margin:0 auto;padding-left:1.25rem;padding-right:1.25rem}
+.logo{display:flex;align-items:center;gap:0.6rem;font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--white);cursor:pointer}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--blue),var(--green));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--white)}
+.logo span{color:var(--orange)}
+.nav{display:flex;align-items:center;gap:0.25rem}
+.nav a{color:rgba(255,255,255,0.8);padding:0.5rem 0.75rem;border-radius:var(--radius-sm);font-size:0.88rem;font-weight:500;transition:all var(--transition);white-space:nowrap}
+.nav a:hover,.nav a.active{color:var(--white);background:rgba(255,255,255,0.1)}
+.nav-cta{background:var(--orange) !important;color:var(--white) !important;padding:0.55rem 1.15rem !important;font-weight:600 !important}
+.nav-cta:hover{background:var(--orange-dark) !important;transform:scale(1.03)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:0.5rem;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2.5px;background:var(--white);border-radius:2px;transition:all var(--transition)}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:1024px){
+  .nav{position:fixed;top:0;right:-100%;width:300px;height:100vh;background:var(--dark);flex-direction:column;padding:5rem 2rem 2rem;gap:0.25rem;transition:right var(--transition);box-shadow:-8px 0 30px rgba(0,0,0,0.3);overflow-y:auto}
+  .nav.open{right:0}
+  .nav a{width:100%;padding:0.85rem 1rem;font-size:1rem;border-radius:var(--radius-sm)}
+  .hamburger{display:flex}
+}
+
+/* ============ PAGES ============ */
+.page{display:none;padding-top:70px;min-height:100vh}
+.page.active{display:block}
+.page-section{padding:5rem 0}
+.page-section:nth-child(even){background:var(--white)}
+
+/* ============ HERO ============ */
+.hero{min-height:calc(100vh - 70px);display:flex;align-items:center;background:linear-gradient(135deg,var(--dark) 0%,#0E2444 50%,#0A1628 100%);position:relative;overflow:hidden;padding:3rem 0}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(0,85,255,0.15),transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,170,0.1),transparent 70%);border-radius:50%}
+.hero .container{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-content{color:var(--white)}
+.hero-badge{margin-bottom:1.5rem}
+.hero h1{margin-bottom:1.25rem;line-height:1.15}
+.hero h1 .highlight{color:var(--orange);position:relative}
+.hero-sub{font-size:1.15rem;color:rgba(255,255,255,0.7);margin-bottom:2rem;max-width:500px;line-height:1.7}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .num{font-family:var(--font-display);font-size:1.75rem;font-weight:800;color:var(--orange)}
+.hero-stat .lbl{font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:0.25rem}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-mockup{width:100%;max-width:480px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:2rem;backdrop-filter:blur(10px);position:relative}
+.hero-mockup-bar{display:flex;gap:6px;margin-bottom:1.5rem}
+.hero-mockup-bar span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.2)}
+.hero-mockup-bar span:first-child{background:#FF5F56}
+.hero-mockup-bar span:nth-child(2){background:#FFBD2E}
+.hero-mockup-bar span:nth-child(3){background:#27CA40}
+.hero-mockup-lines{display:flex;flex-direction:column;gap:0.75rem}
+.hero-mockup-line{height:12px;border-radius:6px;background:rgba(255,255,255,0.08)}
+.hero-mockup-line:nth-child(1){width:60%;background:linear-gradient(90deg,var(--blue),var(--green))}
+.hero-mockup-line:nth-child(2){width:85%}
+.hero-mockup-line:nth-child(3){width:70%}
+.hero-mockup-line:nth-child(4){width:45%;background:rgba(255,107,44,0.3)}
+.hero-float{position:absolute;padding:0.75rem 1.25rem;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-sm);color:var(--white);font-size:0.85rem;display:flex;align-items:center;gap:0.5rem;animation:float 3s ease-in-out infinite}
+.hero-float.f1{top:-10px;right:-20px;animation-delay:0s}
+.hero-float.f2{bottom:20px;left:-30px;animation-delay:1s}
+.hero-float.f3{top:40%;right:-40px;animation-delay:2s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:768px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-sub{margin:0 auto 2rem}
+  .hero-btns{justify-content:center}
+  .hero-stats{justify-content:center}
+  .hero-visual{margin-top:2rem}
+  .hero-float{display:none}
+}
+
+/* ============ QUIZ ============ */
+.quiz-section{background:var(--white);position:relative;overflow:hidden}
+.quiz-card{max-width:700px;margin:0 auto;background:var(--white);border:2px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;position:relative}
+.quiz-progress{display:flex;gap:0.5rem;margin-bottom:2rem}
+.quiz-progress span{flex:1;height:4px;border-radius:2px;background:var(--border);transition:background var(--transition)}
+.quiz-progress span.filled{background:var(--blue)}
+.quiz-question{font-size:1.15rem;font-weight:600;margin-bottom:1.5rem}
+.quiz-options{display:flex;flex-direction:column;gap:0.75rem}
+.quiz-option{padding:1rem 1.25rem;border:2px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;transition:all var(--transition);display:flex;align-items:center;gap:0.75rem;font-weight:500}
+.quiz-option:hover{border-color:var(--blue);background:rgba(0,85,255,0.04)}
+.quiz-option.selected{border-color:var(--blue);background:rgba(0,85,255,0.08)}
+.quiz-option i{color:var(--blue);font-size:1.1rem;width:24px;text-align:center}
+.quiz-result{display:none;text-align:center;padding:2rem 0}
+.quiz-result h3{margin-bottom:0.75rem;color:var(--blue)}
+.quiz-result p{color:var(--text2);margin-bottom:1.5rem}
+.quiz-nav{display:flex;justify-content:flex-end;margin-top:1.5rem;gap:1rem}
+
+/* ============ OFFERS STARS ============ */
+.offers-section{background:var(--bg)}
+.offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.offer-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border);transition:all var(--transition);position:relative;overflow:hidden}
+.offer-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.offer-card.featured{border:2px solid var(--blue);box-shadow:var(--shadow)}
+.offer-card.featured::before{content:'POPULAIRE';position:absolute;top:16px;right:-32px;transform:rotate(45deg);background:var(--blue);color:var(--white);font-size:0.65rem;font-weight:700;padding:0.3rem 2.5rem;letter-spacing:1px}
+.offer-icon{width:56px;height:56px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem}
+.offer-icon.blue{background:rgba(0,85,255,0.1);color:var(--blue)}
+.offer-icon.green{background:rgba(0,212,170,0.1);color:var(--green)}
+.offer-icon.orange{background:rgba(255,107,44,0.1);color:var(--orange)}
+.offer-card h3{margin-bottom:0.5rem}
+.offer-card .price{font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--text);margin:1rem 0 0.25rem}
+.offer-card .price small{font-size:0.85rem;color:var(--text2);font-weight:400}
+.offer-card .price-note{font-size:0.8rem;color:var(--text2);margin-bottom:1rem}
+.offer-features{margin:1.25rem 0;display:flex;flex-direction:column;gap:0.6rem}
+.offer-features li{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.9rem;color:var(--text2)}
+.offer-features li i{color:var(--green);margin-top:3px;flex-shrink:0}
+@media(max-width:768px){.offers-grid{grid-template-columns:1fr}}
+
+/* ============ STATS BAND ============ */
+.stats-band{background:linear-gradient(135deg,var(--dark),#0E2444);padding:3rem 0}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;color:var(--white)}
+.stat-item .stat-num{font-family:var(--font-display);font-size:2.25rem;font-weight:800;color:var(--orange)}
+.stat-item .stat-label{font-size:0.9rem;color:rgba(255,255,255,0.7);margin-top:0.25rem}
+@media(max-width:768px){.stats-row{grid-template-columns:repeat(2,1fr);gap:1.5rem}}
+
+/* ============ TESTIMONIALS ============ */
+.testimonials-section{background:var(--white)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.testimonial-card{background:var(--bg);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border)}
+.testimonial-stars{color:#FBBF24;margin-bottom:0.75rem;font-size:0.9rem}
+.testimonial-text{font-size:0.95rem;color:var(--text);line-height:1.7;margin-bottom:1.25rem;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:0.75rem}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--green));display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:1rem}
+.testimonial-info .name{font-weight:600;font-size:0.9rem}
+.testimonial-info .role{font-size:0.8rem;color:var(--text2)}
+@media(max-width:768px){.testimonials-grid{grid-template-columns:1fr}}
+
+/* ============ LEAD MAGNET ============ */
+.leadmagnet-section{background:linear-gradient(135deg,var(--blue),#0038AA);padding:4rem 0}
+.leadmagnet-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;color:var(--white)}
+.leadmagnet-inner h2{color:var(--white)}
+.leadmagnet-inner p{color:rgba(255,255,255,0.8);margin:1rem 0 0.5rem}
+.leadmagnet-form{display:flex;gap:0.75rem;margin-top:1.5rem}
+.leadmagnet-form input{flex:1;padding:0.85rem 1.25rem;border-radius:var(--radius-sm);border:none;font-size:0.95rem;font-family:var(--font)}
+.leadmagnet-form button{white-space:nowrap}
+.leadmagnet-visual{display:flex;justify-content:center}
+.leadmagnet-book{width:200px;height:260px;background:linear-gradient(145deg,#FFE0CC,#FFB088);border-radius:4px 12px 12px 4px;display:flex;align-items:center;justify-content:center;box-shadow:8px 8px 30px rgba(0,0,0,0.3);position:relative;padding:1.5rem}
+.leadmagnet-book::before{content:'';position:absolute;left:0;top:0;bottom:0;width:15px;background:rgba(0,0,0,0.08);border-radius:4px 0 0 4px}
+.leadmagnet-book span{font-family:var(--font-display);font-weight:700;color:var(--dark);font-size:1rem;text-align:center;line-height:1.4;padding-left:10px}
+@media(max-width:768px){
+  .leadmagnet-inner{grid-template-columns:1fr;text-align:center}
+  .leadmagnet-form{flex-direction:column}
+  .leadmagnet-visual{order:-1}
+}
+
+/* ============ PARTNERS ============ */
+.partners-section{background:var(--bg);padding:3rem 0}
+.partners-row{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;opacity:0.5}
+.partner-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:700;color:var(--text3)}
+
+/* ============ PRICING TABLE ============ */
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.pricing-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border);transition:all var(--transition);display:flex;flex-direction:column}
+.pricing-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.pricing-card.highlighted{border:2px solid var(--blue);position:relative}
+.pricing-card.highlighted::after{content:'BEST-SELLER';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.65rem;font-weight:700;padding:0.25rem 1rem;border-radius:50px;letter-spacing:1px}
+.pricing-card .tier{font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--blue);margin-bottom:0.5rem}
+.pricing-card h3{margin-bottom:0.5rem}
+.pricing-card .price{font-family:var(--font-display);font-size:2rem;font-weight:800;margin:0.75rem 0 0.25rem}
+.pricing-card .price small{font-size:0.8rem;color:var(--text2);font-weight:400}
+.pricing-card .desc{font-size:0.85rem;color:var(--text2);margin-bottom:1.25rem}
+.pricing-card .feat-list{flex:1;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem}
+.pricing-card .feat-list li{font-size:0.85rem;color:var(--text2);display:flex;align-items:flex-start;gap:0.4rem}
+.pricing-card .feat-list li i{color:var(--green);margin-top:3px;flex-shrink:0;font-size:0.75rem}
+.pricing-card .btn{width:100%;justify-content:center}
+@media(max-width:1024px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pricing-grid{grid-template-columns:1fr}}
+
+/* ============ OPTIONS / SERVICES CARDS ============ */
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.service-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border);transition:all var(--transition)}
+.service-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.service-card .sc-icon{width:48px;height:48px;border-radius:var(--radius);background:rgba(0,85,255,0.08);display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:var(--blue);margin-bottom:1rem}
+.service-card h3{font-size:1.1rem;margin-bottom:0.5rem}
+.service-card p{font-size:0.9rem;color:var(--text2);margin-bottom:1rem}
+.service-card .sc-price{font-family:var(--font-display);font-weight:700;color:var(--text);font-size:1.1rem}
+.service-card .sc-price small{color:var(--text2);font-weight:400;font-size:0.85rem}
+@media(max-width:768px){.services-grid{grid-template-columns:1fr}}
+
+/* ============ 3-COL GRID ============ */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media(max-width:1024px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid-3{grid-template-columns:1fr}}
+
+/* ============ PACK METIER ============ */
+.pack-metier{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+.pack-card{background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;border:1px solid var(--border);text-align:center;transition:all var(--transition)}
+.pack-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.pack-card .pack-icon{font-size:2.5rem;margin-bottom:1rem}
+.pack-card h4{margin-bottom:0.5rem}
+.pack-card p{font-size:0.85rem;color:var(--text2);margin-bottom:1rem}
+@media(max-width:768px){.pack-metier{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.pack-metier{grid-template-columns:1fr}}
+
+/* ============ CARTE VISITE ============ */
+.carte-demo{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.carte-mockup{background:linear-gradient(135deg,var(--dark),#162844);border-radius:var(--radius-lg);padding:2.5rem;color:var(--white);position:relative;min-height:280px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow-lg)}
+.carte-mockup .cm-name{font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:0.25rem}
+.carte-mockup .cm-title{color:var(--orange);font-size:0.9rem;font-weight:500;margin-bottom:1.5rem}
+.carte-mockup .cm-info{display:flex;flex-direction:column;gap:0.5rem}
+.carte-mockup .cm-info span{display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:rgba(255,255,255,0.8)}
+.carte-mockup .cm-info i{color:var(--blue);width:20px;text-align:center}
+.carte-mockup .cm-qr{position:absolute;top:2rem;right:2rem;width:64px;height:64px;background:var(--white);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.carte-mockup .cm-qr i{color:var(--dark);font-size:2rem}
+@media(max-width:768px){.carte-demo{grid-template-columns:1fr}}
+
+/* ============ PORTFOLIO ============ */
+.portfolio-filters{display:flex;gap:0.75rem;justify-content:center;margin-bottom:2.5rem;flex-wrap:wrap}
+.portfolio-filters button{padding:0.55rem 1.25rem;border-radius:50px;border:1px solid var(--border);background:var(--white);font-size:0.85rem;font-weight:500;cursor:pointer;transition:all var(--transition);font-family:var(--font);color:var(--text2)}
+.portfolio-filters button:hover,.portfolio-filters button.active{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.portfolio-item{border-radius:var(--radius-lg);overflow:hidden;background:var(--white);border:1px solid var(--border);transition:all var(--transition)}
+.portfolio-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.portfolio-thumb{height:200px;position:relative;overflow:hidden}
+.portfolio-thumb .pt-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,22,40,0.8));display:flex;align-items:flex-end;padding:1.25rem;opacity:0;transition:opacity var(--transition)}
+.portfolio-item:hover .pt-overlay{opacity:1}
+.pt-overlay span{color:var(--white);font-weight:600;font-size:0.9rem}
+.portfolio-body{padding:1.25rem}
+.portfolio-body h4{font-size:1rem;margin-bottom:0.4rem}
+.portfolio-body p{font-size:0.85rem;color:var(--text2)}
+.portfolio-body .pb-tag{display:inline-block;margin-top:0.75rem;padding:0.25rem 0.6rem;border-radius:50px;font-size:0.7rem;font-weight:600;background:rgba(0,85,255,0.1);color:var(--blue)}
+@media(max-width:768px){.portfolio-grid{grid-template-columns:1fr}}
+
+/* ============ BLOG ============ */
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.blog-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);transition:all var(--transition)}
+.blog-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.blog-thumb{height:180px;position:relative}
+.blog-thumb .blog-cat{position:absolute;top:1rem;left:1rem;padding:0.3rem 0.75rem;border-radius:50px;font-size:0.7rem;font-weight:600;background:var(--blue);color:var(--white)}
+.blog-body{padding:1.5rem}
+.blog-body .blog-date{font-size:0.8rem;color:var(--text3);margin-bottom:0.5rem}
+.blog-body h3{font-size:1.05rem;margin-bottom:0.5rem;line-height:1.4}
+.blog-body p{font-size:0.88rem;color:var(--text2);line-height:1.6}
+.blog-body .read-more{display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-size:0.85rem;color:var(--blue);font-weight:600}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}}
+
+/* ============ ABOUT ============ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-img{width:100%;height:360px;background:linear-gradient(135deg,rgba(0,85,255,0.1),rgba(0,212,170,0.1));border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.about-img::before{content:'';position:absolute;width:200px;height:200px;background:linear-gradient(135deg,var(--blue),var(--green));border-radius:50%;opacity:0.2;top:20%;left:10%}
+.about-img i{font-size:5rem;color:var(--blue);opacity:0.6;position:relative;z-index:2}
+.about-content h2{margin-bottom:1rem}
+.about-content p{color:var(--text2);line-height:1.8;margin-bottom:1rem}
+.about-values{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.value-card{text-align:center;padding:1.5rem}
+.value-card i{font-size:2rem;color:var(--blue);margin-bottom:0.75rem}
+.value-card h4{margin-bottom:0.4rem}
+.value-card p{font-size:0.85rem;color:var(--text2)}
+@media(max-width:768px){
+  .about-grid{grid-template-columns:1fr}
+  .about-values{grid-template-columns:1fr}
+}
+
+/* ============ CONTACT / DEVIS ============ */
+.devis-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:3rem}
+.devis-form{background:var(--white);border-radius:var(--radius-lg);padding:2.5rem;border:1px solid var(--border)}
+.form-group{margin-bottom:1.25rem}
+.form-group label{display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--text)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.8rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:0.9rem;font-family:var(--font);transition:border-color var(--transition);background:var(--white);color:var(--text)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--blue)}
+.form-group textarea{height:120px;resize:vertical}
+.form-group .error{border-color:#EF4444}
+.form-group .error-msg{color:#EF4444;font-size:0.8rem;margin-top:0.3rem;display:none}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.devis-info{display:flex;flex-direction:column;gap:1.5rem}
+.devis-info-card{background:var(--white);border-radius:var(--radius-lg);padding:2rem;border:1px solid var(--border)}
+.devis-info-card h3{margin-bottom:1rem;font-size:1.1rem}
+.devis-info-card .dci{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1rem}
+.devis-info-card .dci i{color:var(--blue);margin-top:3px;width:20px;text-align:center}
+.devis-info-card .dci p{font-size:0.9rem;color:var(--text2)}
+.devis-info-card .dci a{color:var(--blue);font-weight:500}
+.calendly-placeholder{background:var(--bg);border-radius:var(--radius);padding:2rem;text-align:center;border:2px dashed var(--border)}
+.calendly-placeholder i{font-size:2.5rem;color:var(--blue);margin-bottom:0.75rem}
+.calendly-placeholder p{font-size:0.9rem;color:var(--text2)}
+@media(max-width:768px){
+  .devis-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+}
+
+/* ============ LEGAL ============ */
+.legal-content{max-width:800px;margin:0 auto;background:var(--white);border-radius:var(--radius-lg);padding:3rem;border:1px solid var(--border)}
+.legal-content h1{font-size:1.75rem;margin-bottom:1.5rem}
+.legal-content h2{font-size:1.25rem;margin:2rem 0 0.75rem;color:var(--blue)}
+.legal-content p,.legal-content ul{font-size:0.92rem;color:var(--text2);line-height:1.8;margin-bottom:1rem}
+.legal-content ul{padding-left:1.5rem;list-style:disc}
+
+/* ============ PAGE HERO (INNER) ============ */
+.page-hero{background:linear-gradient(135deg,var(--dark),#0E2444);padding:4rem 0 3rem;color:var(--white);text-align:center}
+.page-hero .badge{margin-bottom:1rem}
+.page-hero h1{margin-bottom:0.75rem;font-size:clamp(1.75rem,4vw,2.75rem)}
+.page-hero p{color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto;font-size:1.05rem}
+
+/* ============ GUARANTEE BAR ============ */
+.guarantee-bar{background:rgba(0,212,170,0.08);border:1px solid rgba(0,212,170,0.2);border-radius:var(--radius);padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;margin:2rem 0}
+.guarantee-bar i{color:var(--green);font-size:1.5rem;flex-shrink:0}
+.guarantee-bar p{font-size:0.9rem;color:var(--text)}
+.guarantee-bar strong{color:var(--green)}
+
+/* ============ ABONNEMENTS (subscriptions) ============ */
+.sub-toggle{display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:2.5rem}
+.sub-toggle span{font-size:0.9rem;color:var(--text2)}
+.sub-toggle span.active-toggle{color:var(--text);font-weight:600}
+.sub-toggle .toggle-switch{width:48px;height:26px;background:var(--border);border-radius:13px;cursor:pointer;position:relative;transition:background var(--transition)}
+.sub-toggle .toggle-switch.on{background:var(--blue)}
+.sub-toggle .toggle-switch::after{content:'';position:absolute;width:22px;height:22px;background:var(--white);border-radius:50%;top:2px;left:2px;transition:transform var(--transition);box-shadow:0 2px 4px rgba(0,0,0,0.15)}
+.sub-toggle .toggle-switch.on::after{transform:translateX(22px)}
+.sub-badge{background:var(--green);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:50px;margin-left:0.5rem}
+
+/* ============ SUPPORT SECTION ============ */
+.support-category{margin-bottom:3rem}
+.support-category>h3{font-size:1.25rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem}
+.support-category>h3 i{color:var(--blue)}
+
+/* ============ ASSOCIATION ============ */
+.asso-badge-section{background:linear-gradient(135deg,rgba(0,85,255,0.05),rgba(0,212,170,0.05));border-radius:var(--radius-lg);padding:2rem;text-align:center;margin-bottom:3rem;border:1px solid var(--border)}
+.asso-badge-section i{font-size:3rem;color:var(--blue);margin-bottom:0.75rem}
+
+/* ============ WHATSAPP FLOAT ============ */
+.whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.75rem;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:all var(--transition);animation:pulse-wa 2s infinite}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 25px rgba(37,211,102,0.5)}
+@keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 20px rgba(37,211,102,0.4),0 0 0 12px rgba(37,211,102,0.1)}}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--dark);color:var(--white);padding:4rem 0 0}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
+.footer-col h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.5);margin-bottom:1.25rem}
+.footer-col p{font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.7}
+.footer-col a{display:block;font-size:0.88rem;color:rgba(255,255,255,0.7);padding:0.3rem 0;transition:color var(--transition)}
+.footer-col a:hover{color:var(--orange)}
+.footer-brand .logo{margin-bottom:1rem}
+.footer-social{display:flex;gap:0.75rem;margin-top:1.25rem}
+.footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:rgba(255,255,255,0.7);transition:all var(--transition)}
+.footer-social a:hover{background:var(--orange);color:var(--white);transform:translateY(-2px)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:0.8rem;color:rgba(255,255,255,0.5)}
+.footer-bottom-links{display:flex;gap:1.5rem}
+.footer-bottom-links a{font-size:0.8rem;color:rgba(255,255,255,0.5)}
+.footer-bottom-links a:hover{color:var(--orange)}
+@media(max-width:768px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+
+/* ============ ANIMATIONS ============ */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal-left.revealed{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal-right.revealed{opacity:1;transform:translateX(0)}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--text3);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--text2)}
+
+/* ============ UTILS ============ */
+.text-center{text-align:center}
+.mt-1{margin-top:0.5rem}.mt-2{margin-top:1rem}.mt-3{margin-top:1.5rem}.mt-4{margin-top:2rem}.mt-5{margin-top:3rem}
+.mb-1{margin-bottom:0.5rem}.mb-2{margin-bottom:1rem}.mb-3{margin-bottom:1.5rem}.mb-4{margin-bottom:2rem}
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header" id="mainHeader">
+  <div class="header-inner">
+    <div class="logo" onclick="navigateTo('home')">
+      <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+      Site<span>Rapide</span>
+    </div>
+    <nav class="nav" id="mainNav">
+      <a href="#" onclick="navigateTo('home');return false">Accueil</a>
+      <a href="#" onclick="navigateTo('sites-internet');return false">Sites Internet</a>
+      <a href="#" onclick="navigateTo('services-ia');return false">Services IA</a>
+      <a href="#" onclick="navigateTo('generation-leads');return false">Leads</a>
+      <a href="#" onclick="navigateTo('support-client');return false">Support Client</a>
+      <a href="#" onclick="navigateTo('abonnements');return false">Abonnements</a>
+      <a href="#" onclick="navigateTo('realisations');return false">Réalisations</a>
+      <a href="#" onclick="navigateTo('blog');return false">Blog</a>
+      <a href="#" onclick="navigateTo('devis');return false" class="nav-cta"><i class="fas fa-paper-plane"></i> Devis gratuit</a>
+    </nav>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ==================== PAGE: HOME ==================== -->
+<main class="page active" id="page-home" data-page="home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal-left">
+          <div class="hero-badge"><span class="badge badge-green">🚀 Prêt en 48h</span></div>
+          <h1>Votre site pro en 48h, <span class="highlight">boosté par l'IA</span></h1>
+          <p class="hero-sub">Sites internet, automatisation, marketing digital — tout ce dont votre entreprise a besoin pour se digitaliser. Sans jargon. Sans complexité.</p>
+          <div class="hero-btns">
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Devis gratuit</a>
+            <a href="#" onclick="scrollToSection('quiz-section');return false" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.3);color:var(--white)"><i class="fas fa-wand-magic-sparkles"></i> Diagnostic gratuit</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><div class="num">48h</div><div class="lbl">Livraison express</div></div>
+            <div class="hero-stat"><div class="num">+500</div><div class="lbl">Clients satisfaits</div></div>
+            <div class="hero-stat"><div class="num">98%</div><div class="lbl">Satisfaction</div></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal-right">
+          <div class="hero-mockup">
+            <div class="hero-mockup-bar"><span></span><span></span><span></span></div>
+            <div class="hero-mockup-lines">
+              <div class="hero-mockup-line"></div>
+              <div class="hero-mockup-line"></div>
+              <div class="hero-mockup-line"></div>
+              <div class="hero-mockup-line"></div>
+            </div>
+            <div class="hero-float f1"><i class="fas fa-bolt" style="color:#FBBF24"></i> IA active</div>
+            <div class="hero-float f2"><i class="fas fa-chart-line" style="color:var(--green)"></i> +180% leads</div>
+            <div class="hero-float f3"><i class="fas fa-shield-halved" style="color:var(--blue)"></i> SSL inclus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <section class="stats-band">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stat-item reveal"><div class="stat-num">48h</div><div class="stat-label">Livraison moyenne</div></div>
+        <div class="stat-item reveal"><div class="stat-num">+500</div><div class="stat-label">Projets livrés</div></div>
+        <div class="stat-item reveal"><div class="stat-num">98%</div><div class="stat-label">Clients satisfaits</div></div>
+        <div class="stat-item reveal"><div class="stat-num">24/7</div><div class="stat-label">Support réactif</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ DIAGNOSTIC -->
+  <section class="quiz-section page-section" id="quiz-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="badge badge-blue"><i class="fas fa-wand-magic-sparkles"></i> Diagnostic gratuit</span>
+        <h2>Trouvez la solution parfaite pour vous</h2>
+        <p>Répondez à 3 questions rapides et recevez une recommandation personnalisée</p>
+      </div>
+      <div class="quiz-card reveal" id="quizCard">
+        <div class="quiz-progress">
+          <span class="filled" id="qp1"></span>
+          <span id="qp2"></span>
+          <span id="qp3"></span>
+        </div>
+        <!-- Question 1 -->
+        <div class="quiz-step" id="quiz-step-1">
+          <div class="quiz-question">1. Quel est votre objectif principal ?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectQuiz(1,'presence')" data-value="presence"><i class="fas fa-globe"></i> Avoir une présence en ligne professionnelle</div>
+            <div class="quiz-option" onclick="selectQuiz(1,'clients')" data-value="clients"><i class="fas fa-user-plus"></i> Trouver de nouveaux clients</div>
+            <div class="quiz-option" onclick="selectQuiz(1,'automatiser')" data-value="automatiser"><i class="fas fa-robot"></i> Automatiser mes tâches répétitives</div>
+            <div class="quiz-option" onclick="selectQuiz(1,'documents')" data-value="documents"><i class="fas fa-file-alt"></i> Créer des documents professionnels</div>
+          </div>
+          <div class="quiz-nav"><button class="btn btn-primary btn-sm" onclick="nextQuiz(1)" id="quiz-next-1" disabled>Suivant <i class="fas fa-arrow-right"></i></button></div>
+        </div>
+        <!-- Question 2 -->
+        <div class="quiz-step" id="quiz-step-2" style="display:none">
+          <div class="quiz-question">2. Quel est votre secteur d'activité ?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectQuiz(2,'artisan')" data-value="artisan"><i class="fas fa-hammer"></i> Artisan / BTP</div>
+            <div class="quiz-option" onclick="selectQuiz(2,'commerce')" data-value="commerce"><i class="fas fa-store"></i> Commerce / Restauration</div>
+            <div class="quiz-option" onclick="selectQuiz(2,'freelance')" data-value="freelance"><i class="fas fa-laptop"></i> Freelance / Consultant</div>
+            <div class="quiz-option" onclick="selectQuiz(2,'association')" data-value="association"><i class="fas fa-hands-helping"></i> Association</div>
+            <div class="quiz-option" onclick="selectQuiz(2,'pme')" data-value="pme"><i class="fas fa-building"></i> PME / Entreprise</div>
+          </div>
+          <div class="quiz-nav"><button class="btn btn-secondary btn-sm" onclick="prevQuiz(2)"><i class="fas fa-arrow-left"></i> Retour</button><button class="btn btn-primary btn-sm" onclick="nextQuiz(2)" id="quiz-next-2" disabled>Suivant <i class="fas fa-arrow-right"></i></button></div>
+        </div>
+        <!-- Question 3 -->
+        <div class="quiz-step" id="quiz-step-3" style="display:none">
+          <div class="quiz-question">3. Quel est votre budget approximatif ?</div>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectQuiz(3,'petit')" data-value="petit"><i class="fas fa-coins"></i> Moins de 300 €</div>
+            <div class="quiz-option" onclick="selectQuiz(3,'moyen')" data-value="moyen"><i class="fas fa-wallet"></i> 300 € - 1 000 €</div>
+            <div class="quiz-option" onclick="selectQuiz(3,'grand')" data-value="grand"><i class="fas fa-gem"></i> Plus de 1 000 €</div>
+          </div>
+          <div class="quiz-nav"><button class="btn btn-secondary btn-sm" onclick="prevQuiz(3)"><i class="fas fa-arrow-left"></i> Retour</button><button class="btn btn-primary btn-sm" onclick="showQuizResult()">Voir ma recommandation <i class="fas fa-sparkles"></i></button></div>
+        </div>
+        <!-- Result -->
+        <div class="quiz-result" id="quiz-result">
+          <div style="font-size:3rem;margin-bottom:1rem" id="quiz-result-icon">🎯</div>
+          <h3 id="quiz-result-title">Votre recommandation</h3>
+          <p id="quiz-result-text">Recommandation personnalisée</p>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Obtenir un devis personnalisé</a>
+          <div style="margin-top:1rem"><a href="#" onclick="resetQuiz();return false" style="color:var(--blue);font-size:0.85rem"><i class="fas fa-rotate"></i> Recommencer</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES STARS -->
+  <section class="offers-section page-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="badge badge-orange"><i class="fas fa-star"></i> Nos offres phares</span>
+        <h2>Démarrez votre transformation digitale</h2>
+        <p>Des solutions clé-en-main à prix accessibles pour lancer votre activité en ligne</p>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card reveal">
+          <div class="offer-icon blue"><i class="fas fa-globe"></i></div>
+          <h3>Site Starter</h3>
+          <p style="font-size:0.88rem;color:var(--text2)">Votre vitrine professionnelle en ligne, prête en 48h</p>
+          <div class="price">299€ <small>HT</small></div>
+          <div class="price-note">Paiement unique</div>
+          <ul class="offer-features">
+            <li><i class="fas fa-check"></i> 1 à 5 pages responsive</li>
+            <li><i class="fas fa-check"></i> Design professionnel</li>
+            <li><i class="fas fa-check"></i> SEO basique</li>
+            <li><i class="fas fa-check"></i> Formulaire de contact</li>
+            <li><i class="fas fa-check"></i> Livré en 48h</li>
+          </ul>
+          <a href="#" onclick="navigateTo('sites-internet');return false" class="btn btn-secondary" style="width:100%;justify-content:center">Découvrir</a>
+        </div>
+        <div class="offer-card featured reveal">
+          <div class="offer-icon orange"><i class="fas fa-file-chart-line"></i></div>
+          <h3>Business Plan IA</h3>
+          <p style="font-size:0.88rem;color:var(--text2)">Un business plan professionnel rédigé par l'IA, personnalisé pour votre projet</p>
+          <div class="price">149€ <small>HT</small></div>
+          <div class="price-note">Paiement unique</div>
+          <ul class="offer-features">
+            <li><i class="fas fa-check"></i> Analyse de marché complète</li>
+            <li><i class="fas fa-check"></i> Prévisionnel financier</li>
+            <li><i class="fas fa-check"></i> Stratégie marketing</li>
+            <li><i class="fas fa-check"></i> Format PDF professionnel</li>
+            <li><i class="fas fa-check"></i> 2 révisions incluses</li>
+          </ul>
+          <a href="#" onclick="navigateTo('services-ia');return false" class="btn btn-primary" style="width:100%;justify-content:center">Commander</a>
+        </div>
+        <div class="offer-card reveal">
+          <div class="offer-icon green"><i class="fas fa-chart-mixed"></i></div>
+          <h3>Pack Visibilité</h3>
+          <p style="font-size:0.88rem;color:var(--text2)">Réseaux sociaux + blog SEO pour être visible partout, tout le temps</p>
+          <div class="price">99€<small>/mois HT</small></div>
+          <div class="price-note">Sans engagement</div>
+          <ul class="offer-features">
+            <li><i class="fas fa-check"></i> 12 posts réseaux sociaux</li>
+            <li><i class="fas fa-check"></i> 2 articles blog SEO</li>
+            <li><i class="fas fa-check"></i> Reporting mensuel</li>
+            <li><i class="fas fa-check"></i> Calendrier éditorial</li>
+            <li><i class="fas fa-check"></i> Support prioritaire</li>
+          </ul>
+          <a href="#" onclick="navigateTo('abonnements');return false" class="btn btn-secondary" style="width:100%;justify-content:center">S'abonner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section page-section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="badge badge-green"><i class="fas fa-heart"></i> Témoignages</span>
+        <h2>Ils nous font confiance</h2>
+        <p>Des centaines de professionnels ont déjà fait le choix de la simplicité</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"Mon site était prêt en 2 jours, exactement ce qu'il me fallait. Mes clients me trouvent maintenant sur Google et je reçois des demandes de devis chaque semaine. Le rapport qualité-prix est imbattable."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JD</div>
+            <div class="testimonial-info"><div class="name">Jean Dupont</div><div class="role">Plombier · Paris 15e</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"L'assistant sur mon site répond aux questions de mes clients pendant que je suis en rendez-vous. C'est comme avoir un employé en plus, mais sans les charges ! Résultat : +40% de prises de contact."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div class="testimonial-info"><div class="name">Sophie Martin</div><div class="role">Architecte d'intérieur · Lyon</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+          <p class="testimonial-text">"Le business plan qu'ils m'ont livré m'a permis de décrocher un prêt bancaire de 50 000€. Le banquier a été impressionné par la qualité et le sérieux du dossier. Investissement largement rentabilisé !"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KN</div>
+            <div class="testimonial-info"><div class="name">Karim Nasser</div><div class="role">Fondateur · FoodTruck K&Co</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"Pour notre association, le budget était serré. SiteRapide nous a fait un tarif adapté et le résultat est top. On a même intégré une page de dons qui a boosté nos collectes de 60%."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CL</div>
+            <div class="testimonial-info"><div class="name">Claire Leroy</div><div class="role">Présidente · Les Jardins Solidaires</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD MAGNET -->
+  <section class="leadmagnet-section">
+    <div class="container">
+      <div class="leadmagnet-inner">
+        <div class="reveal-left">
+          <span class="badge" style="background:rgba(255,255,255,0.2);color:var(--white)"><i class="fas fa-gift"></i> Guide gratuit</span>
+          <h2>10 outils IA gratuits pour booster votre business</h2>
+          <p>Découvrez les meilleurs outils gratuits d'intelligence artificielle pour automatiser votre quotidien, gagner du temps et développer votre chiffre d'affaires.</p>
+          <div class="leadmagnet-form" id="leadmagnetForm">
+            <input type="email" placeholder="Votre adresse email" id="leadEmail" aria-label="Adresse email">
+            <button class="btn btn-primary" onclick="submitLeadMagnet()"><i class="fas fa-download"></i> Télécharger</button>
+          </div>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.5rem">🔒 Pas de spam. Désinscription en 1 clic.</p>
+        </div>
+        <div class="leadmagnet-visual reveal-right">
+          <div class="leadmagnet-book"><span>10 Outils IA Gratuits pour Votre Business</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners-section">
+    <div class="container">
+      <p style="text-align:center;font-size:0.8rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:1.5rem">Ils nous font confiance</p>
+      <div class="partners-row">
+        <div class="partner-logo">TechVision</div>
+        <div class="partner-logo">DigitalPro</div>
+        <div class="partner-logo">InnovaLab</div>
+        <div class="partner-logo">SmartBiz</div>
+        <div class="partner-logo">FrenchTech</div>
+        <div class="partner-logo">BPI Référencé</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== PAGE: SITES INTERNET ==================== -->
+<main class="page" id="page-sites-internet" data-page="sites-internet">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-blue"><i class="fas fa-globe"></i> Sites Internet</span>
+      <h1>Un site professionnel à votre image</h1>
+      <p>4 formules adaptées à chaque besoin et budget. Tous nos sites sont responsive, optimisés SEO et livrés clé-en-main.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="guarantee-bar reveal">
+        <i class="fas fa-shield-check"></i>
+        <p><strong>Garantie Satisfait ou Retouché</strong> — Si le résultat ne vous convient pas, on le retouche gratuitement jusqu'à ce que ce soit parfait.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="tier">Starter</div>
+          <h3>Vitrine Express</h3>
+          <div class="price">299€ <small>HT</small></div>
+          <div class="desc">1-5 pages · Livré en 48h</div>
+          <ul class="feat-list">
+            <li><i class="fas fa-check"></i> Design responsive moderne</li>
+            <li><i class="fas fa-check"></i> SEO basique (balises, sitemap)</li>
+            <li><i class="fas fa-check"></i> Formulaire de contact</li>
+            <li><i class="fas fa-check"></i> Hébergement 1 an inclus</li>
+            <li><i class="fas fa-check"></i> Certificat SSL gratuit</li>
+          </ul>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-secondary">Commander</a>
+        </div>
+        <div class="pricing-card highlighted reveal">
+          <div class="tier">Pro</div>
+          <h3>Business</h3>
+          <div class="price">599€ <small>HT</small></div>
+          <div class="desc">5-10 pages · Livré en 5-7 jours</div>
+          <ul class="feat-list">
+            <li><i class="fas fa-check"></i> Tout le Starter +</li>
+            <li><i class="fas fa-check"></i> SEO avancé + Google Analytics</li>
+            <li><i class="fas fa-check"></i> Assistant FAQ intégré</li>
+            <li><i class="fas fa-check"></i> Blog intégré</li>
+            <li><i class="fas fa-check"></i> Intégration réseaux sociaux</li>
+            <li><i class="fas fa-check"></i> 2 révisions incluses</li>
+          </ul>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary">Commander</a>
+        </div>
+        <div class="pricing-card reveal">
+          <div class="tier">Premium</div>
+          <h3>E-Commerce</h3>
+          <div class="price">1 199€ <small>HT</small></div>
+          <div class="desc">Pages illimitées · 10-15 jours</div>
+          <ul class="feat-list">
+            <li><i class="fas fa-check"></i> Tout le Pro +</li>
+            <li><i class="fas fa-check"></i> Vendeur virtuel 24h/24</li>
+            <li><i class="fas fa-check"></i> Prise de RDV automatique</li>
+            <li><i class="fas fa-check"></i> Boutique e-commerce</li>
+            <li><i class="fas fa-check"></i> Espace client sécurisé</li>
+            <li><i class="fas fa-check"></i> Dashboard analytics</li>
+          </ul>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-secondary">Commander</a>
+        </div>
+        <div class="pricing-card reveal">
+          <div class="tier">Entreprise</div>
+          <h3>Sur Mesure</h3>
+          <div class="price">Sur devis</div>
+          <div class="desc">100% sur mesure · 15-30 jours</div>
+          <ul class="feat-list">
+            <li><i class="fas fa-check"></i> Tout le Premium +</li>
+            <li><i class="fas fa-check"></i> Multi-agents IA dédiés</li>
+            <li><i class="fas fa-check"></i> Intégrations sur mesure (CRM, ERP)</li>
+            <li><i class="fas fa-check"></i> Support dédié prioritaire</li>
+            <li><i class="fas fa-check"></i> Formation équipe incluse</li>
+            <li><i class="fas fa-check"></i> SLA garanti</li>
+          </ul>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-dark">Demander un devis</a>
+        </div>
+      </div>
+
+      <!-- OPTIONS À LA CARTE -->
+      <div class="mt-5">
+        <div class="section-title reveal">
+          <span class="badge badge-orange"><i class="fas fa-puzzle-piece"></i> Options à la carte</span>
+          <h2>Boostez votre site avec l'IA</h2>
+          <p>Ajoutez des fonctionnalités intelligentes à n'importe quelle formule</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="sc-icon"><i class="fas fa-comments"></i></div>
+            <h3>Un vendeur sur votre site, 24h/24</h3>
+            <p>Votre assistant commercial répond aux visiteurs, qualifie les prospects et les oriente — même quand vous dormez.</p>
+            <div class="sc-price">À partir de 99€ <small>/mois</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-calendar-check"></i></div>
+            <h3>Vos rendez-vous pris automatiquement</h3>
+            <p>Vos clients réservent directement sur votre site. Fini les allers-retours par téléphone.</p>
+            <div class="sc-price">À partir de 79€ <small>/mois</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-paper-plane"></i></div>
+            <h3>Vos devis relancés automatiquement</h3>
+            <p>Ne perdez plus de clients par oubli. Votre assistant relance automatiquement les devis sans réponse.</p>
+            <div class="sc-price">À partir de 69€ <small>/mois</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-headset"></i></div>
+            <h3>Un assistant qui répond pendant que vous travaillez</h3>
+            <p>Vos clients obtiennent des réponses instantanées à leurs questions, 24h/24, 7j/7.</p>
+            <div class="sc-price">À partir de 89€ <small>/mois</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PACKS MÉTIER -->
+      <div class="mt-5">
+        <div class="section-title reveal">
+          <span class="badge badge-green"><i class="fas fa-briefcase"></i> Packs Métier</span>
+          <h2>Solutions clé-en-main par profession</h2>
+          <p>Un site pré-conçu avec du contenu adapté à votre métier. Prêt en 48h.</p>
+        </div>
+        <div class="pack-metier">
+          <div class="pack-card reveal">
+            <div class="pack-icon">🔧</div>
+            <h4>Pack Plombier</h4>
+            <p>Site urgences, zone d'intervention, tarifs, avis clients, formulaire de demande</p>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 349€</a>
+          </div>
+          <div class="pack-card reveal">
+            <div class="pack-icon">🍽️</div>
+            <h4>Pack Restaurant</h4>
+            <p>Menu en ligne, réservation, galerie photos, horaires, avis Google intégrés</p>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 399€</a>
+          </div>
+          <div class="pack-card reveal">
+            <div class="pack-icon">⚖️</div>
+            <h4>Pack Avocat</h4>
+            <p>Domaines de compétence, prise de RDV, formulaire confidentiel, articles juridiques</p>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 449€</a>
+          </div>
+          <div class="pack-card reveal">
+            <div class="pack-icon">💇</div>
+            <h4>Pack Coiffeur</h4>
+            <p>Galerie coiffures, réservation en ligne, tarifs, équipe, produits utilisés</p>
+            <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary">À partir de 349€</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Demander un devis gratuit</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: CARTE DE VISITE ==================== -->
+<main class="page" id="page-carte-de-visite" data-page="carte-de-visite">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-green"><i class="fas fa-id-card"></i> Cartes de Visite</span>
+      <h1>Votre carte de visite digitale</h1>
+      <p>Partagez vos coordonnées en un clic. QR Code, NFC, analytics — la carte de visite du futur.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="carte-demo reveal">
+        <div>
+          <h2 style="margin-bottom:1rem">Fini les cartes en papier perdues</h2>
+          <p style="color:var(--text2);line-height:1.8;margin-bottom:1.5rem">Votre carte de visite digitale se partage en un scan de QR Code ou un simple tap NFC. Vos contacts sont automatiquement enregistrés dans le téléphone de votre interlocuteur. Et vous savez exactement qui a consulté votre carte grâce aux analytics intégrés.</p>
+          <div class="services-grid" style="grid-template-columns:1fr 1fr">
+            <div class="service-card">
+              <h3>Carte Simple</h3>
+              <p>vCard + QR Code personnalisé. Parfait pour démarrer.</p>
+              <div class="sc-price">49€ <small>HT</small></div>
+              <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-secondary mt-2">Commander</a>
+            </div>
+            <div class="service-card" style="border-color:var(--blue)">
+              <span class="badge badge-blue mb-1">Populaire</span>
+              <h3>Carte Pro</h3>
+              <p>NFC + Analytics + Design premium + Mises à jour illimitées.</p>
+              <div class="sc-price">99€ <small>HT</small></div>
+              <a href="#" onclick="navigateTo('devis');return false" class="btn btn-sm btn-primary mt-2">Commander</a>
+            </div>
+          </div>
+        </div>
+        <div class="carte-mockup reveal-right">
+          <div class="cm-qr"><i class="fas fa-qrcode"></i></div>
+          <div class="cm-name">Marie Laurent</div>
+          <div class="cm-title">Consultante en stratégie</div>
+          <div class="cm-info">
+            <span><i class="fas fa-phone"></i> +33 6 12 34 56 78</span>
+            <span><i class="fas fa-envelope"></i> marie@example.com</span>
+            <span><i class="fas fa-globe"></i> www.marielaurent.fr</span>
+            <span><i class="fas fa-location-dot"></i> Paris, France</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: SERVICES IA ==================== -->
+<main class="page" id="page-services-ia" data-page="services-ia">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-orange"><i class="fas fa-wand-magic-sparkles"></i> Services IA</span>
+      <h1>Des documents professionnels, sans effort</h1>
+      <p>Business plans, plaquettes, visuels — l'IA les crée pour vous en un temps record, à une fraction du coût traditionnel.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="guarantee-bar reveal">
+        <i class="fas fa-shield-check"></i>
+        <p><strong>Satisfait ou Retouché</strong> — Chaque document inclut des révisions gratuites pour que le résultat vous convienne parfaitement.</p>
+      </div>
+
+      <!-- DOCUMENTS PRO -->
+      <div class="mb-4">
+        <h2 class="reveal" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem"><span style="font-size:1.5rem">📊</span> Documents Pro</h2>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="sc-icon"><i class="fas fa-file-chart-line"></i></div>
+            <h3>Business Plan personnalisé</h3>
+            <p>Un dossier complet avec analyse de marché, prévisionnel financier et stratégie. Idéal pour convaincre banquiers et investisseurs.</p>
+            <div class="sc-price">À partir de 149€ <small>HT</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-book-open"></i></div>
+            <h3>Plaquette commerciale design</h3>
+            <p>Une plaquette visuelle et percutante pour présenter vos services. Format PDF ou impression.</p>
+            <div class="sc-price">À partir de 149€ <small>HT</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-presentation-screen"></i></div>
+            <h3>Pitch Deck investisseurs</h3>
+            <p>Une présentation qui capte l'attention et convainc. Design premium, storytelling efficace.</p>
+            <div class="sc-price">À partir de 199€ <small>HT</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-chart-pie"></i></div>
+            <h3>Étude de marché</h3>
+            <p>Analyse approfondie de votre marché, concurrence, tendances et opportunités. Données concrètes pour décider.</p>
+            <div class="sc-price">À partir de 299€ <small>HT</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARCHÉS & SUBVENTIONS -->
+      <div class="mb-4 mt-5">
+        <h2 class="reveal" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem"><span style="font-size:1.5rem">🏛️</span> Marchés &amp; Subventions</h2>
+        <p class="reveal" style="color:var(--text2);margin-bottom:1.5rem">Notre expertise la plus demandée — un taux de succès qui parle de lui-même.</p>
+        <div class="services-grid">
+          <div class="service-card reveal" style="border:2px solid var(--blue)">
+            <span class="badge badge-blue mb-2">⭐ Offre Star</span>
+            <div class="sc-icon"><i class="fas fa-gavel"></i></div>
+            <h3>Réponse appels d'offres / Mémoire technique</h3>
+            <p>Un dossier complet et structuré pour maximiser vos chances de remporter le marché. Rédaction professionnelle adaptée aux critères de notation.</p>
+            <div class="sc-price">À partir de 699€ <small>HT</small></div>
+          </div>
+          <div class="service-card reveal" style="border:2px solid var(--green)">
+            <span class="badge badge-green mb-2">🔥 Forte demande</span>
+            <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-hand-holding-dollar"></i></div>
+            <h3>Dossier de subventions</h3>
+            <p>Montage complet de dossiers France Num, BPI France, aides régionales. On identifie les subventions et on monte le dossier.</p>
+            <div class="sc-price">À partir de 499€ <small>HT</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-file-signature"></i></div>
+            <h3>Réponse aux consultations</h3>
+            <p>Préparation et rédaction de vos réponses aux consultations publiques ou privées. Documents structurés et convaincants.</p>
+            <div class="sc-price">À partir de 399€ <small>HT</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VISUELS & BRANDING -->
+      <div class="mt-5">
+        <h2 class="reveal" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem"><span style="font-size:1.5rem">🎨</span> Visuels &amp; Branding</h2>
+        <div class="grid-3">
+          <div class="service-card reveal">
+            <div class="sc-icon"><i class="fas fa-palette"></i></div>
+            <h3>Logo + Charte graphique</h3>
+            <p>Une identité visuelle complète et professionnelle : logo, couleurs, typographies, guide d'utilisation.</p>
+            <div class="sc-price">À partir de 99€ <small>HT</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-video"></i></div>
+            <h3>Vidéo promotionnelle (30s)</h3>
+            <p>Une vidéo percutante pour vos réseaux sociaux et votre site. Motion design professionnel.</p>
+            <div class="sc-price">À partir de 149€ <small>HT</small></div>
+          </div>
+          <div class="service-card reveal">
+            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-image"></i></div>
+            <h3>Mockups produits</h3>
+            <p>Mettez en valeur vos produits avec des mockups réalistes et professionnels pour vos supports de communication.</p>
+            <div class="sc-price">À partir de 79€ <small>HT</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Demander un devis gratuit</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: GÉNÉRATION DE LEADS ==================== -->
+<main class="page" id="page-generation-leads" data-page="generation-leads">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-orange"><i class="fas fa-magnet"></i> Génération de Leads</span>
+      <h1>Trouvez vos prochains clients</h1>
+      <p>Landing pages, publicités IA, bases de données — des solutions concrètes pour remplir votre carnet de commandes.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="guarantee-bar reveal">
+        <i class="fas fa-shield-check"></i>
+        <p><strong>Satisfait ou Retouché</strong> — On optimise jusqu'à ce que vos résultats décollent.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="sc-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Landing pages optimisées</h3>
+          <p>Des pages de vente conçues pour convertir. Tests A/B, copywriting persuasif, design orienté action.</p>
+          <div class="sc-price">À partir de 199€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-rectangle-ad"></i></div>
+          <h3>Campagnes publicitaires IA</h3>
+          <p>Meta Ads, Google Ads — l'IA optimise vos campagnes en temps réel pour un coût par lead minimal.</p>
+          <div class="sc-price">À partir de 299€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-database"></i></div>
+          <h3>Bases de données prospects</h3>
+          <p>500 contacts qualifiés dans votre secteur. Emails vérifiés, données enrichies, prêts à contacter.</p>
+          <div class="sc-price">À partir de 199€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-book"></i></div>
+          <h3>Lead magnets sur mesure</h3>
+          <p>Ebooks, guides, checklists — du contenu premium que vos prospects échangent contre leur email.</p>
+          <div class="sc-price">À partir de 149€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="sc-icon" style="background:rgba(236,72,153,0.08);color:#EC4899"><i class="fas fa-list-check"></i></div>
+          <h3>Formulaires intelligents avec scoring</h3>
+          <p>Vos formulaires qualifient automatiquement les prospects. Chaque lead reçoit un score de priorité.</p>
+          <div class="sc-price">À partir de 99€ <small>HT</small></div>
+        </div>
+      </div>
+      <div class="text-center mt-5 reveal">
+        <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-rocket"></i> Boostez votre acquisition</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: SUPPORT CLIENT ==================== -->
+<main class="page" id="page-support-client" data-page="support-client">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-green"><i class="fas fa-headset"></i> Support &amp; Relation Client</span>
+      <h1>Ne ratez plus aucune demande client</h1>
+      <p>Des assistants IA qui répondent, qualifient et résolvent — pendant que vous vous concentrez sur votre métier.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="guarantee-bar reveal">
+        <i class="fas fa-shield-check"></i>
+        <p><strong>Satisfait ou Retouché</strong> — On ajuste votre assistant jusqu'à ce qu'il réponde parfaitement à vos besoins.</p>
+      </div>
+
+      <!-- SAV & Support -->
+      <div class="support-category reveal">
+        <h3><i class="fas fa-message-bot"></i> SAV &amp; Support automatisé</h3>
+        <div class="grid-3">
+          <div class="service-card">
+            <div class="sc-icon"><i class="fas fa-comments"></i></div>
+            <h3>Un assistant qui répond 24h/24</h3>
+            <p>Votre chatbot SAV répond instantanément aux questions fréquentes de vos clients.</p>
+            <div class="sc-price">99€ <small>/mois</small></div>
+          </div>
+          <div class="service-card" style="border-color:var(--blue)">
+            <span class="badge badge-blue mb-1">Populaire</span>
+            <h3>80% des demandes résolues automatiquement</h3>
+            <p>Chatbot avancé avec escalade intelligente vers un humain quand c'est nécessaire.</p>
+            <div class="sc-price">199€ <small>/mois</small></div>
+          </div>
+          <div class="service-card">
+            <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-layer-group"></i></div>
+            <h3>Tous vos canaux couverts</h3>
+            <p>Support multicanal unifié : site web + WhatsApp + email. Une seule interface pour tout gérer.</p>
+            <div class="sc-price">349€ <small>/mois</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centre d'Appel Virtuel -->
+      <div class="support-category reveal mt-5">
+        <h3><i class="fas fa-phone-volume"></i> Centre d'Appel Virtuel</h3>
+        <div class="grid-3">
+          <div class="service-card">
+            <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-phone"></i></div>
+            <h3>Ne ratez plus aucun appel</h3>
+            <p>Un assistant téléphonique IA qui décroche, prend les messages et transfère si nécessaire.</p>
+            <div class="sc-price">149€ <small>/mois</small></div>
+          </div>
+          <div class="service-card">
+            <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-users-line"></i></div>
+            <h3>Votre standard intelligent</h3>
+            <p>Centre d'appel virtuel multi-agents. Plusieurs lignes, routage intelligent, statistiques temps réel.</p>
+            <div class="sc-price">399€ <small>/mois</small></div>
+          </div>
+          <div class="service-card" style="border-color:var(--green)">
+            <span class="badge badge-green mb-1">Pack 360°</span>
+            <h3>La relation client sans limites</h3>
+            <p>Téléphone + Chat + Email + WhatsApp + Dashboard. La solution complète pour une expérience client parfaite.</p>
+            <div class="sc-price">599€ <small>/mois</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Demander un devis gratuit</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: ASSOCIATIONS ==================== -->
+<main class="page" id="page-associations" data-page="associations">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-green"><i class="fas fa-hands-helping"></i> Offre Associations</span>
+      <h1>Le digital au service de votre cause</h1>
+      <p>Des tarifs adaptés et des solutions pensées pour les associations. Parce que votre mission mérite la meilleure visibilité.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="asso-badge-section reveal">
+        <i class="fas fa-award"></i>
+        <h3>Partenaire officiel des associations</h3>
+        <p style="color:var(--text2);max-width:500px;margin:0.5rem auto 0">Tarifs réduits, accompagnement dédié et solutions adaptées au monde associatif.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="sc-icon"><i class="fas fa-globe"></i></div>
+          <h3>Site vitrine association</h3>
+          <p>Présentez votre association, vos actions, votre équipe. Un site professionnel à prix réduit.</p>
+          <div class="sc-price">À partir de 199€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Page de collecte de dons</h3>
+          <p>Intégration HelloAsso ou Stripe. Page optimisée pour maximiser les dons en ligne.</p>
+          <div class="sc-price">À partir de 149€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal" style="border-color:var(--blue)">
+          <span class="badge badge-blue mb-2">Recommandé</span>
+          <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-bullhorn"></i></div>
+          <h3>Campagne de collecte complète</h3>
+          <p>Landing page + emails + visuels + relances automatiques. Tout ce qu'il faut pour une campagne réussie.</p>
+          <div class="sc-price">À partir de 399€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="sc-icon" style="background:rgba(99,102,241,0.08);color:#6366F1"><i class="fas fa-box-open"></i></div>
+          <h3>Pack Asso tout-en-un</h3>
+          <p>Site + page de dons + chatbot donateur + 3 mois de visibilité réseaux sociaux inclus.</p>
+          <div class="sc-price">À partir de 599€ <small>HT</small></div>
+        </div>
+        <div class="service-card reveal">
+          <div class="sc-icon" style="background:rgba(236,72,153,0.08);color:#EC4899"><i class="fas fa-comments"></i></div>
+          <h3>Chatbot donateur</h3>
+          <p>Un assistant qui répond aux questions des donateurs, les guide vers les dons et les remercie automatiquement.</p>
+          <div class="sc-price">À partir de 149€ <small>HT</small></div>
+        </div>
+      </div>
+      <div class="text-center mt-5 reveal">
+        <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-hands-helping"></i> Découvrir l'offre associations</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: ABONNEMENTS ==================== -->
+<main class="page" id="page-abonnements" data-page="abonnements">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-blue"><i class="fas fa-crown"></i> Abonnements Marketing</span>
+      <h1>Votre marketing digital, en pilote automatique</h1>
+      <p>Réseaux sociaux, SEO, email marketing, publicité — on s'occupe de tout pour que votre business grandisse.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="sub-toggle reveal" style="margin-bottom:2.5rem">
+        <span id="toggleMonthly" class="active-toggle">Mensuel</span>
+        <div class="toggle-switch" id="subToggle" onclick="toggleSubscription()"></div>
+        <span id="toggleAnnual">6 mois <span class="sub-badge">-20%</span></span>
+      </div>
+
+      <div class="pricing-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="pricing-card reveal">
+          <div class="tier">Visibilité</div>
+          <h3>Pack Visibilité</h3>
+          <div class="price sub-price" data-monthly="99" data-annual="79">99€ <small>/mois HT</small></div>
+          <div class="desc">L'essentiel pour être visible en ligne</div>
+          <ul class="feat-list">
+            <li><i class="fas fa-check"></i> 12 posts réseaux sociaux / mois</li>
+            <li><i class="fas fa-check"></i> 2 articles blog SEO / mois</li>
+            <li><i class="fas fa-check"></i> Calendrier éditorial</li>
+            <li><i class="fas fa-check"></i> Reporting mensuel</li>
+            <li><i class="fas fa-check"></i> 1 réseau social géré</li>
+          </ul>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-secondary">S'abonner</a>
+        </div>
+        <div class="pricing-card highlighted reveal">
+          <div class="tier">Croissance</div>
+          <h3>Pack Croissance</h3>
+          <div class="price sub-price" data-monthly="249" data-annual="199">249€ <small>/mois HT</small></div>
+          <div class="desc">Pour accélérer votre développement</div>
+          <ul class="feat-list">
+            <li><i class="fas fa-check"></i> Tout le Pack Visibilité +</li>
+            <li><i class="fas fa-check"></i> Séquences email automatisées</li>
+            <li><i class="fas fa-check"></i> Assistant FAQ sur votre site</li>
+            <li><i class="fas fa-check"></i> 1 landing page optimisée</li>
+            <li><i class="fas fa-check"></i> 3 réseaux sociaux gérés</li>
+            <li><i class="fas fa-check"></i> Support prioritaire</li>
+          </ul>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary">S'abonner</a>
+        </div>
+        <div class="pricing-card reveal">
+          <div class="tier">Premium</div>
+          <h3>Pack Premium</h3>
+          <div class="price sub-price" data-monthly="499" data-annual="399">499€ <small>/mois HT</small></div>
+          <div class="desc">La solution tout-en-un ultime</div>
+          <ul class="feat-list">
+            <li><i class="fas fa-check"></i> Tout le Pack Croissance +</li>
+            <li><i class="fas fa-check"></i> Agents IA dédiés</li>
+            <li><i class="fas fa-check"></i> Campagnes Meta & Google Ads</li>
+            <li><i class="fas fa-check"></i> Dashboard leads temps réel</li>
+            <li><i class="fas fa-check"></i> Tous réseaux sociaux gérés</li>
+            <li><i class="fas fa-check"></i> Account manager dédié</li>
+          </ul>
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-secondary">S'abonner</a>
+        </div>
+      </div>
+
+      <!-- MAINTENANCE -->
+      <div class="mt-5 text-center reveal">
+        <div class="service-card" style="max-width:500px;margin:0 auto;text-align:center;border:2px dashed var(--border)">
+          <h3><i class="fas fa-tools" style="color:var(--blue)"></i> Maintenance site</h3>
+          <p>Hébergement, mises à jour, sauvegardes et support technique inclus.</p>
+          <div class="sc-price">49€ <small>/mois HT</small></div>
+        </div>
+      </div>
+
+      <div class="guarantee-bar reveal mt-4">
+        <i class="fas fa-shield-check"></i>
+        <p><strong>Sans engagement</strong> ou <strong>-20% avec engagement 6 mois</strong>. Garantie "Satisfait ou Retouché" sur tous nos abonnements.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: RÉALISATIONS ==================== -->
+<main class="page" id="page-realisations" data-page="realisations">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-blue"><i class="fas fa-images"></i> Réalisations</span>
+      <h1>Nos dernières créations</h1>
+      <p>Découvrez nos projets récents. Chaque réalisation est le fruit d'une collaboration étroite avec nos clients.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="portfolio-filters reveal">
+        <button class="active" onclick="filterPortfolio('all',this)">Tout</button>
+        <button onclick="filterPortfolio('site',this)">Sites</button>
+        <button onclick="filterPortfolio('document',this)">Documents</button>
+        <button onclick="filterPortfolio('visuel',this)">Visuels</button>
+        <button onclick="filterPortfolio('association',this)">Associations</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item reveal" data-cat="site">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Plomberie Martin</h4>
+            <p>Site vitrine + prise de RDV pour un artisan plombier à Marseille. +200% de demandes en 3 mois.</p>
+            <span class="pb-tag">Site Starter</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal" data-cat="document">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0f3460,#16213e)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Business Plan — FoodTruck K&Co</h4>
+            <p>Business plan complet ayant permis l'obtention d'un prêt bancaire de 50 000€.</p>
+            <span class="pb-tag">Business Plan</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal" data-cat="site">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1b262c,#0f4c75)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Cabinet Avocats Durand & Associés</h4>
+            <p>Site Pro avec prise de RDV, blog juridique et assistant FAQ. Conversion +150%.</p>
+            <span class="pb-tag">Site Pro</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal" data-cat="visuel">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#e94560,#0f3460)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Branding — Studio Créatif Luna</h4>
+            <p>Identité visuelle complète : logo, charte graphique, templates réseaux sociaux.</p>
+            <span class="pb-tag">Branding</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal" data-cat="association">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#00b4d8,#0077b6)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Les Jardins Solidaires</h4>
+            <p>Site + page de dons HelloAsso. Collecte augmentée de 60% en 6 mois.</p>
+            <span class="pb-tag">Association</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal" data-cat="site">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#2d3436,#636e72)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Restaurant Le Comptoir Gourmand</h4>
+            <p>Pack Restaurant avec menu interactif, réservation et galerie photos. +300 réservations/mois.</p>
+            <span class="pb-tag">Pack Métier</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal" data-cat="document">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Mémoire technique — BTP Innov</h4>
+            <p>Réponse complète à un appel d'offres public de 2M€. Marché remporté.</p>
+            <span class="pb-tag">Appel d'offres</span>
+          </div>
+        </div>
+        <div class="portfolio-item reveal" data-cat="visuel">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#fd79a8,#e17055)">
+            <div class="pt-overlay"><span>Voir le projet →</span></div>
+          </div>
+          <div class="portfolio-body">
+            <h4>Vidéo promo — EcoClean Services</h4>
+            <p>Vidéo motion design 30s pour réseaux sociaux. 45K vues en 2 semaines.</p>
+            <span class="pb-tag">Vidéo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: BLOG ==================== -->
+<main class="page" id="page-blog" data-page="blog">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-orange"><i class="fas fa-pen-nib"></i> Blog</span>
+      <h1>Conseils &amp; Actualités</h1>
+      <p>Astuces, guides et tendances pour les entrepreneurs qui veulent tirer le meilleur du digital et de l'IA.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="blog-grid">
+        <div class="blog-card reveal">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#0055FF,#00D4AA)">
+            <span class="blog-cat">IA pour votre business</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date">15 juin 2026</div>
+            <h3>5 façons dont l'IA peut doubler votre chiffre d'affaires en 2026</h3>
+            <p>L'intelligence artificielle n'est plus réservée aux grandes entreprises. Découvrez 5 applications concrètes pour les TPE et PME.</p>
+            <span class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#FF6B2C,#FBBF24)">
+            <span class="blog-cat">Marketing</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date">10 juin 2026</div>
+            <h3>Le guide complet du SEO local pour les artisans en 2026</h3>
+            <p>Comment apparaître en premier sur Google quand un client cherche un artisan près de chez lui. Le guide pas à pas.</p>
+            <span class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#6366F1,#EC4899)">
+            <span class="blog-cat">Digital</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date">5 juin 2026</div>
+            <h3>Pourquoi 73% des clients vérifient votre site avant de vous appeler</h3>
+            <p>Les chiffres sont sans appel : ne pas avoir de site web professionnel, c'est perdre 3 clients sur 4.</p>
+            <span class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#00D4AA,#0055FF)">
+            <span class="blog-cat">Conseils entrepreneurs</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date">1er juin 2026</div>
+            <h3>Automatiser sa prospection : le secret des indépendants qui réussissent</h3>
+            <p>Comment mettre en place un système d'acquisition client qui travaille pour vous, même quand vous êtes en mission.</p>
+            <span class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#1a1a2e,#e94560)">
+            <span class="blog-cat">IA pour votre business</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date">25 mai 2026</div>
+            <h3>Chatbot vs standard téléphonique : le comparatif qui va vous surprendre</h3>
+            <p>Un assistant virtuel coûte 10x moins qu'une standardiste et travaille 24h/24. Mais est-ce vraiment mieux ?</p>
+            <span class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#2d3436,#0984e3)">
+            <span class="blog-cat">Marketing</span>
+          </div>
+          <div class="blog-body">
+            <div class="blog-date">20 mai 2026</div>
+            <h3>Comment créer une landing page qui convertit à plus de 15%</h3>
+            <p>Les 7 éléments indispensables d'une landing page performante, avec exemples concrets et templates gratuits.</p>
+            <span class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: À PROPOS ==================== -->
+<main class="page" id="page-a-propos" data-page="a-propos">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-blue"><i class="fas fa-users"></i> À propos</span>
+      <h1>Pourquoi on a créé SiteRapide</h1>
+      <p>Rendre le digital accessible à tous les entrepreneurs, sans jargon et sans budget démesuré.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="about-grid reveal">
+        <div class="about-img">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <div class="about-content">
+          <h2>Notre mission</h2>
+          <p>On a créé SiteRapide avec une conviction simple : <strong>chaque entrepreneur mérite une présence digitale professionnelle</strong>, quel que soit son budget.</p>
+          <p>Trop de TPE, artisans et associations se retrouvent exclus du digital à cause de devis à 5 000€, de délais de 3 mois et de jargon incompréhensible. On a décidé de changer ça.</p>
+          <p>Grâce à l'IA, on produit des sites, documents et visuels de qualité professionnelle en une fraction du temps et du coût traditionnels. L'IA fait le gros du travail technique, nos experts supervisent et affinent. Le résultat : <strong>un travail de qualité agence, au prix d'un freelance junior</strong>.</p>
+        </div>
+      </div>
+
+      <div class="about-values reveal mt-5">
+        <div class="value-card">
+          <i class="fas fa-bolt"></i>
+          <h4>Rapidité</h4>
+          <p>48h pour un site, pas 3 mois. On va droit au but, sans process inutile.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h4>Accessibilité</h4>
+          <p>Des prix pensés pour les petites structures. Pas de facture à 5 chiffres.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-star"></i>
+          <h4>Qualité</h4>
+          <p>L'IA + l'expertise humaine = qualité pro garantie. Satisfait ou retouché.</p>
+        </div>
+      </div>
+
+      <div class="mt-5 reveal">
+        <div class="section-title">
+          <h2>L'équipe derrière SiteRapide</h2>
+          <p>Une équipe pluridisciplinaire passionnée par le digital et l'entrepreneuriat</p>
+        </div>
+        <div class="grid-3">
+          <div class="testimonial-card" style="text-align:center">
+            <div class="testimonial-avatar" style="width:72px;height:72px;font-size:1.5rem;margin:0 auto 1rem">🧑‍💻</div>
+            <div class="name" style="font-weight:600;font-size:1rem">Experts Web</div>
+            <div class="role" style="color:var(--text2);font-size:0.85rem">Design & Développement</div>
+            <p style="font-size:0.85rem;color:var(--text2);margin-top:0.75rem">Des créatifs et développeurs qui transforment vos idées en sites performants.</p>
+          </div>
+          <div class="testimonial-card" style="text-align:center">
+            <div class="testimonial-avatar" style="width:72px;height:72px;font-size:1.5rem;margin:0 auto 1rem;background:linear-gradient(135deg,var(--orange),#FBBF24)">🤖</div>
+            <div class="name" style="font-weight:600;font-size:1rem">Spécialistes IA</div>
+            <div class="role" style="color:var(--text2);font-size:0.85rem">Automatisation & Intelligence</div>
+            <p style="font-size:0.85rem;color:var(--text2);margin-top:0.75rem">Ils configurent les assistants et agents IA qui travaillent pour vous 24h/24.</p>
+          </div>
+          <div class="testimonial-card" style="text-align:center">
+            <div class="testimonial-avatar" style="width:72px;height:72px;font-size:1.5rem;margin:0 auto 1rem;background:linear-gradient(135deg,var(--green),#00A888)">📈</div>
+            <div class="name" style="font-weight:600;font-size:1rem">Stratèges Marketing</div>
+            <div class="role" style="color:var(--text2);font-size:0.85rem">Acquisition & Growth</div>
+            <p style="font-size:0.85rem;color:var(--text2);margin-top:0.75rem">Des experts en acquisition qui savent comment transformer des visiteurs en clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: DEVIS ==================== -->
+<main class="page" id="page-devis" data-page="devis">
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-orange"><i class="fas fa-paper-plane"></i> Devis gratuit</span>
+      <h1>Parlons de votre projet</h1>
+      <p>Remplissez le formulaire ci-dessous et recevez un devis personnalisé sous 24h. C'est gratuit et sans engagement.</p>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="devis-grid">
+        <div class="devis-form reveal" id="devisForm">
+          <h3 style="margin-bottom:1.5rem"><i class="fas fa-file-lines" style="color:var(--blue)"></i> Votre demande</h3>
+          <div class="form-group">
+            <label for="devis-service">Service souhaité *</label>
+            <select id="devis-service" required>
+              <option value="">Choisissez un service...</option>
+              <option value="site-starter">Site Starter (299€)</option>
+              <option value="site-pro">Site Pro (599€)</option>
+              <option value="site-premium">Site Premium (1 199€)</option>
+              <option value="site-entreprise">Site Entreprise (sur devis)</option>
+              <option value="carte-visite">Carte de visite digitale</option>
+              <option value="business-plan">Business Plan IA</option>
+              <option value="plaquette">Plaquette commerciale</option>
+              <option value="pitch-deck">Pitch Deck investisseurs</option>
+              <option value="etude-marche">Étude de marché</option>
+              <option value="appel-offres">Réponse appel d'offres</option>
+              <option value="subventions">Dossier de subventions</option>
+              <option value="logo-branding">Logo & charte graphique</option>
+              <option value="video">Vidéo promotionnelle</option>
+              <option value="landing-page">Landing page</option>
+              <option value="campagne-ads">Campagne publicitaire</option>
+              <option value="base-prospects">Base de données prospects</option>
+              <option value="chatbot">Assistant / Chatbot IA</option>
+              <option value="centre-appels">Centre d'appel virtuel</option>
+              <option value="abonnement-marketing">Abonnement marketing</option>
+              <option value="offre-association">Offre association</option>
+              <option value="autre">Autre (précisez)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="devis-secteur">Secteur d'activité *</label>
+              <input type="text" id="devis-secteur" placeholder="Ex: Plomberie, Restauration..." required>
+            </div>
+            <div class="form-group">
+              <label for="devis-budget">Budget estimé</label>
+              <select id="devis-budget">
+                <option value="">Sélectionnez...</option>
+                <option value="<300">Moins de 300€</option>
+                <option value="300-1000">300€ - 1 000€</option>
+                <option value="1000-3000">1 000€ - 3 000€</option>
+                <option value=">3000">Plus de 3 000€</option>
+                <option value="recurrent">Abonnement mensuel</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="devis-besoin">Décrivez votre besoin *</label>
+            <textarea id="devis-besoin" placeholder="Décrivez votre projet en quelques lignes..." required></textarea>
+          </div>
+          <h3 style="margin:2rem 0 1.5rem"><i class="fas fa-user" style="color:var(--blue)"></i> Vos coordonnées</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="devis-nom">Nom complet *</label>
+              <input type="text" id="devis-nom" placeholder="Jean Dupont" required>
+            </div>
+            <div class="form-group">
+              <label for="devis-email">Email *</label>
+              <input type="email" id="devis-email" placeholder="jean@exemple.fr" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="devis-tel">Téléphone</label>
+              <input type="tel" id="devis-tel" placeholder="06 12 34 56 78">
+            </div>
+            <div class="form-group">
+              <label for="devis-whatsapp">WhatsApp</label>
+              <input type="tel" id="devis-whatsapp" placeholder="+33 6 12 34 56 78">
+            </div>
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:0.5rem" onclick="submitDevis()"><i class="fas fa-paper-plane"></i> Envoyer ma demande</button>
+          <p style="text-align:center;font-size:0.8rem;color:var(--text3);margin-top:0.75rem">🔒 Vos données sont protégées et ne seront jamais revendues.</p>
+        </div>
+
+        <div class="devis-info">
+          <div class="devis-info-card reveal">
+            <h3><i class="fas fa-clock" style="color:var(--blue)"></i> Réponse rapide</h3>
+            <p style="font-size:0.9rem;color:var(--text2)">On vous répond sous 24h avec un devis détaillé et personnalisé. Gratuit et sans engagement.</p>
+          </div>
+          <div class="devis-info-card reveal">
+            <h3><i class="fas fa-phone" style="color:var(--green)"></i> Contactez-nous directement</h3>
+            <div class="dci"><i class="fas fa-phone"></i><p><a href="tel:+33123456789">01 23 45 67 89</a></p></div>
+            <div class="dci"><i class="fab fa-whatsapp" style="color:#25D366"></i><p><a href="https://wa.me/33612345678">+33 6 12 34 56 78</a></p></div>
+            <div class="dci"><i class="fas fa-envelope"></i><p><a href="mailto:contact@siterapide.fr">contact@siterapide.fr</a></p></div>
+            <div class="dci"><i class="fas fa-location-dot"></i><p>Paris, France</p></div>
+          </div>
+          <div class="devis-info-card reveal">
+            <h3><i class="fas fa-calendar" style="color:var(--orange)"></i> Réservez un créneau</h3>
+            <div class="calendly-placeholder">
+              <i class="fas fa-calendar-check"></i>
+              <p>Planifiez un appel de 15 min pour discuter de votre projet</p>
+              <a href="#" class="btn btn-sm btn-secondary mt-2" onclick="return false"><i class="fas fa-calendar-plus"></i> Réserver un créneau</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: MENTIONS LÉGALES ==================== -->
+<main class="page" id="page-mentions-legales" data-page="mentions-legales">
+  <section class="page-hero">
+    <div class="container"><h1>Mentions Légales</h1></div>
+  </section>
+  <section class="page-section">
+    <div class="container">
+      <div class="legal-content">
+        <h2>Éditeur du site</h2>
+        <p>SiteRapide — Service de création de sites internet et solutions digitales<br>Adresse : Paris, France<br>Email : contact@siterapide.fr<br>Téléphone : 01 23 45 67 89</p>
+        <h2>Hébergement</h2>
+        <p>Le site est hébergé par CloudStation.<br>Adresse : France</p>
+        <h2>Propriété intellectuelle</h2>
+        <p>L'ensemble du contenu de ce site (textes, images, logos, éléments graphiques) est la propriété exclusive de SiteRapide ou de ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+        <h2>Responsabilité</h2>
+        <p>SiteRapide s'efforce de fournir des informations aussi précises que possible. Toutefois, SiteRapide ne saurait être tenu responsable des omissions, inexactitudes ou carences dans la mise à jour de ces informations.</p>
+        <h2>Données personnelles</h2>
+        <p>Les informations recueillies via les formulaires de ce site sont destinées exclusivement à SiteRapide pour le traitement de vos demandes. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez-nous à : contact@siterapide.fr</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: CGV ==================== -->
+<main class="page" id="page-cgv" data-page="cgv">
+  <section class="page-hero">
+    <div class="container"><h1>Conditions Générales de Vente</h1></div>
+  </section>
+  <section class="page-section">
+    <div class="container">
+      <div class="legal-content">
+        <h2>Article 1 — Objet</h2>
+        <p>Les présentes CGV régissent les relations contractuelles entre SiteRapide et ses clients pour la fourniture de services de création web, documents professionnels et solutions digitales.</p>
+        <h2>Article 2 — Prestations</h2>
+        <p>SiteRapide propose des prestations de création de sites internet, documents professionnels, solutions d'automatisation et marketing digital. Le détail des prestations et tarifs est disponible sur le site siterapide.fr.</p>
+        <h2>Article 3 — Commande et validation</h2>
+        <p>Toute commande est validée après réception du devis signé et du règlement de l'acompte (50% du montant total). Le solde est dû à la livraison du projet.</p>
+        <h2>Article 4 — Délais de livraison</h2>
+        <p>Les délais indiqués sont des estimations. SiteRapide s'engage à livrer les projets dans les meilleurs délais. Un retard de livraison ne peut donner lieu à annulation de la commande.</p>
+        <h2>Article 5 — Garantie "Satisfait ou Retouché"</h2>
+        <p>SiteRapide s'engage à effectuer les modifications nécessaires jusqu'à la satisfaction du client, dans la limite du cahier des charges initial. Les révisions mineures sont incluses. Les modifications majeures font l'objet d'un devis complémentaire.</p>
+        <h2>Article 6 — Paiement</h2>
+        <p>Les prix sont indiqués en euros hors taxes. Le paiement peut être effectué par virement bancaire, carte bancaire ou PayPal. Pour les abonnements, le prélèvement est mensuel sauf engagement de 6 mois.</p>
+        <h2>Article 7 — Résiliation des abonnements</h2>
+        <p>Les abonnements sans engagement peuvent être résiliés à tout moment avec un préavis de 30 jours. Les abonnements avec engagement de 6 mois sont soumis aux conditions de durée minimale.</p>
+        <h2>Article 8 — Droit applicable</h2>
+        <p>Les présentes CGV sont régies par le droit français. Tout litige sera soumis aux tribunaux compétents de Paris.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: POLITIQUE DE CONFIDENTIALITÉ ==================== -->
+<main class="page" id="page-politique-confidentialite" data-page="politique-confidentialite">
+  <section class="page-hero">
+    <div class="container"><h1>Politique de Confidentialité</h1></div>
+  </section>
+  <section class="page-section">
+    <div class="container">
+      <div class="legal-content">
+        <h2>Collecte des données</h2>
+        <p>SiteRapide collecte les données personnelles suivantes : nom, prénom, email, numéro de téléphone, données de navigation. Ces données sont collectées lors de la soumission de formulaires ou de la navigation sur le site.</p>
+        <h2>Utilisation des données</h2>
+        <p>Vos données sont utilisées exclusivement pour : traiter vos demandes de devis, vous fournir nos services, améliorer notre site, vous envoyer des communications commerciales (avec votre consentement).</p>
+        <h2>Conservation des données</h2>
+        <p>Vos données sont conservées pendant une durée maximale de 3 ans après le dernier contact. Elles sont ensuite supprimées ou anonymisées.</p>
+        <h2>Vos droits</h2>
+        <p>Conformément au RGPD, vous disposez des droits suivants : accès, rectification, suppression, limitation du traitement, portabilité, opposition. Pour exercer ces droits : contact@siterapide.fr</p>
+        <h2>Cookies</h2>
+        <p>Ce site utilise des cookies techniques nécessaires au fonctionnement du site et des cookies analytiques pour améliorer votre expérience. Vous pouvez paramétrer vos préférences de cookies à tout moment.</p>
+        <h2>Sécurité</h2>
+        <p>SiteRapide met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, modification, divulgation ou destruction.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== PAGE: CGU ==================== -->
+<main class="page" id="page-cgu" data-page="cgu">
+  <section class="page-hero">
+    <div class="container"><h1>Conditions Générales d'Utilisation</h1></div>
+  </section>
+  <section class="page-section">
+    <div class="container">
+      <div class="legal-content">
+        <h2>Acceptation des conditions</h2>
+        <p>L'utilisation du site siterapide.fr implique l'acceptation pleine et entière des présentes conditions générales d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site.</p>
+        <h2>Accès au site</h2>
+        <p>Le site est accessible gratuitement à tout utilisateur disposant d'un accès internet. SiteRapide ne peut être tenu responsable des interruptions temporaires du service pour maintenance, mise à jour ou tout autre motif.</p>
+        <h2>Contenu du site</h2>
+        <p>Les informations et tarifs présentés sur le site sont donnés à titre indicatif et sont susceptibles d'évoluer. SiteRapide se réserve le droit de modifier le contenu du site à tout moment sans préavis.</p>
+        <h2>Propriété intellectuelle</h2>
+        <p>Tous les éléments du site (textes, images, logos, icônes, vidéos) sont protégés par le droit de la propriété intellectuelle. Toute reproduction non autorisée constitue une contrefaçon.</p>
+        <h2>Limitation de responsabilité</h2>
+        <p>SiteRapide ne saurait être tenu responsable des dommages directs ou indirects résultant de l'utilisation du site ou de l'impossibilité d'y accéder.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="logo" onclick="navigateTo('home')">
+          <div class="logo-icon"><i class="fas fa-rocket"></i></div>
+          Site<span>Rapide</span>
+        </div>
+        <p>Votre partenaire digital. Sites internet, services IA et marketing pour TPE, artisans, PME et associations. Prêt en 48h.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#" onclick="navigateTo('sites-internet');return false">Sites Internet</a>
+        <a href="#" onclick="navigateTo('carte-de-visite');return false">Cartes de Visite</a>
+        <a href="#" onclick="navigateTo('services-ia');return false">Services IA</a>
+        <a href="#" onclick="navigateTo('generation-leads');return false">Génération de Leads</a>
+        <a href="#" onclick="navigateTo('support-client');return false">Support Client</a>
+        <a href="#" onclick="navigateTo('associations');return false">Offre Associations</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ressources</h4>
+        <a href="#" onclick="navigateTo('abonnements');return false">Abonnements</a>
+        <a href="#" onclick="navigateTo('realisations');return false">Réalisations</a>
+        <a href="#" onclick="navigateTo('blog');return false">Blog</a>
+        <a href="#" onclick="navigateTo('a-propos');return false">À propos</a>
+        <a href="#" onclick="navigateTo('devis');return false">Devis gratuit</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+33123456789"><i class="fas fa-phone" style="margin-right:6px"></i> 01 23 45 67 89</a>
+        <a href="mailto:contact@siterapide.fr"><i class="fas fa-envelope" style="margin-right:6px"></i> contact@siterapide.fr</a>
+        <a href="https://wa.me/33612345678"><i class="fab fa-whatsapp" style="margin-right:6px;color:#25D366"></i> WhatsApp</a>
+        <a href="#"><i class="fas fa-location-dot" style="margin-right:6px"></i> Paris, France</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SiteRapide. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="#" onclick="navigateTo('mentions-legales');return false">Mentions légales</a>
+        <a href="#" onclick="navigateTo('cgv');return false">CGV</a>
+        <a href="#" onclick="navigateTo('politique-confidentialite');return false">Confidentialité</a>
+        <a href="#" onclick="navigateTo('cgu');return false">CGU</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/33612345678" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+// ===== ROUTER =====
+function navigateTo(page) {
+  // Close mobile menu
+  document.getElementById('mainNav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('active');
+  document.body.style.overflow = '';
+
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+  // Show target page
+  const target = document.getElementById('page-' + page);
+  if (target) {
+    target.classList.add('active');
+  } else {
+    document.getElementById('page-home').classList.add('active');
+  }
+
+  // Update URL hash
+  if (page === 'home') {
+    history.pushState(null, '', window.location.pathname);
+  } else {
+    history.pushState(null, '', '#' + page);
+  }
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'instant' });
+
+  // Update active nav
+  updateActiveNav(page);
+
+  // Re-observe reveals
+  setTimeout(initRevealObserver, 100);
+}
+
+function updateActiveNav(page) {
+  document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+  // Find matching nav link
+  document.querySelectorAll('.nav a').forEach(a => {
+    const onclick = a.getAttribute('onclick') || '';
+    if (onclick.includes("'" + page + "'")) {
+      a.classList.add('active');
+    }
+  });
+}
+
+// Handle back/forward
+window.addEventListener('popstate', function() {
+  const hash = window.location.hash.replace('#', '');
+  const page = hash || 'home';
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + page);
+  if (target) target.classList.add('active');
+  else document.getElementById('page-home').classList.add('active');
+  updateActiveNav(page);
+  setTimeout(initRevealObserver, 100);
+});
+
+// Init from hash
+window.addEventListener('DOMContentLoaded', function() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    navigateTo(hash);
+  }
+});
+
+// ===== MOBILE MENU =====
+function toggleMenu() {
+  const nav = document.getElementById('mainNav');
+  const hamburger = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  hamburger.classList.toggle('active');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+
+// Close menu on nav link click (mobile)
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.getElementById('mainNav').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+// ===== STICKY HEADER =====
+window.addEventListener('scroll', function() {
+  const header = document.getElementById('mainHeader');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// ===== SCROLL TO SECTION =====
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// ===== SCROLL REVEAL =====
+function initRevealObserver() {
+  const revealElements = document.querySelectorAll('.reveal:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed)');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(function(el) { observer.observe(el); });
+  } else {
+    revealElements.forEach(function(el) { el.classList.add('revealed'); });
+  }
+}
+window.addEventListener('DOMContentLoaded', initRevealObserver);
+
+// ===== QUIZ =====
+var quizAnswers = {};
+
+function selectQuiz(step, value) {
+  quizAnswers[step] = value;
+  // Highlight selected
+  var options = document.querySelectorAll('#quiz-step-' + step + ' .quiz-option');
+  options.forEach(function(opt) {
+    opt.classList.remove('selected');
+    if (opt.getAttribute('data-value') === value) opt.classList.add('selected');
+  });
+  // Enable next button
+  var nextBtn = document.getElementById('quiz-next-' + step);
+  if (nextBtn) nextBtn.disabled = false;
+}
+
+function nextQuiz(step) {
+  if (!quizAnswers[step]) return;
+  document.getElementById('quiz-step-' + step).style.display = 'none';
+  document.getElementById('quiz-step-' + (step + 1)).style.display = 'block';
+  // Update progress
+  document.getElementById('qp' + (step + 1)).classList.add('filled');
+}
+
+function prevQuiz(step) {
+  document.getElementById('quiz-step-' + step).style.display = 'none';
+  document.getElementById('quiz-step-' + (step - 1)).style.display = 'block';
+}
+
+function showQuizResult() {
+  // Hide question
+  document.getElementById('quiz-step-3').style.display = 'none';
+  var result = document.getElementById('quiz-result');
+  result.style.display = 'block';
+
+  // Generate recommendation
+  var obj = quizAnswers[1] || 'presence';
+  var sector = quizAnswers[2] || 'pme';
+  var budget = quizAnswers[3] || 'moyen';
+  var icon = document.getElementById('quiz-result-icon');
+  var title = document.getElementById('quiz-result-title');
+  var text = document.getElementById('quiz-result-text');
+
+  if (obj === 'presence' && budget === 'petit') {
+    icon.textContent = '🚀'; title.textContent = 'Site Starter — 299€';
+    text.textContent = 'Un site vitrine professionnel, prêt en 48h. La solution parfaite pour démarrer avec un petit budget.';
+  } else if (obj === 'presence') {
+    icon.textContent = '⭐'; title.textContent = 'Site Pro — 599€';
+    text.textContent = 'Un site complet avec SEO avancé et assistant FAQ. Le choix idéal pour se démarquer de la concurrence.';
+  } else if (obj === 'clients' && budget === 'petit') {
+    icon.textContent = '🎯'; title.textContent = 'Landing Page + Lead Magnet';
+    text.textContent = 'Une page d\'atterrissage optimisée + un contenu premium pour capturer des leads qualifiés. À partir de 199€.';
+  } else if (obj === 'clients') {
+    icon.textContent = '📈'; title.textContent = 'Pack Croissance — 249€/mois';
+    text.textContent = 'Réseaux sociaux + email + chatbot + landing page. La solution complète pour trouver de nouveaux clients chaque mois.';
+  } else if (obj === 'automatiser') {
+    icon.textContent = '🤖'; title.textContent = 'Assistant IA + Automatisation';
+    text.textContent = 'Un assistant qui répond à vos clients 24h/24 et automatise vos tâches répétitives. À partir de 99€/mois.';
+  } else if (obj === 'documents') {
+    icon.textContent = '📊'; title.textContent = 'Business Plan IA — 149€';
+    text.textContent = 'Un business plan professionnel complet, personnalisé pour votre projet. Livré en 48h avec 2 révisions incluses.';
+  } else {
+    icon.textContent = '🎯'; title.textContent = 'Solution personnalisée';
+    text.textContent = 'Votre besoin est unique ! Contactez-nous pour un devis 100% adapté à votre situation.';
+  }
+
+  if (sector === 'association') {
+    icon.textContent = '💚'; title.textContent = 'Offre spéciale Associations';
+    text.textContent = 'En tant qu\'association, bénéficiez de tarifs réduits et de solutions adaptées à votre mission. À partir de 199€.';
+  }
+}
+
+function resetQuiz() {
+  quizAnswers = {};
+  document.getElementById('quiz-result').style.display = 'none';
+  document.getElementById('quiz-step-1').style.display = 'block';
+  document.querySelectorAll('.quiz-option').forEach(function(o) { o.classList.remove('selected'); });
+  document.querySelectorAll('.quiz-progress span').forEach(function(s,i) {
+    s.classList.toggle('filled', i === 0);
+  });
+  var btn1 = document.getElementById('quiz-next-1');
+  var btn2 = document.getElementById('quiz-next-2');
+  if (btn1) btn1.disabled = true;
+  if (btn2) btn2.disabled = true;
+}
+
+// ===== LEAD MAGNET =====
+function submitLeadMagnet() {
+  var email = document.getElementById('leadEmail').value;
+  if (!email || !email.includes('@')) {
+    alert('Veuillez entrer une adresse email valide.');
+    return;
+  }
+  alert('Merci ! Votre guide "10 outils IA gratuits" va être envoyé à ' + email + '.');
+  document.getElementById('leadEmail').value = '';
+}
+
+// ===== DEVIS FORM =====
+function submitDevis() {
+  var service = document.getElementById('devis-service').value;
+  var secteur = document.getElementById('devis-secteur').value;
+  var besoin = document.getElementById('devis-besoin').value;
+  var nom = document.getElementById('devis-nom').value;
+  var email = document.getElementById('devis-email').value;
+  var valid = true;
+  var fields = [
+    { id: 'devis-service', val: service },
+    { id: 'devis-secteur', val: secteur },
+    { id: 'devis-besoin', val: besoin },
+    { id: 'devis-nom', val: nom },
+    { id: 'devis-email', val: email }
+  ];
+  fields.forEach(function(f) {
+    var el = document.getElementById(f.id);
+    if (!f.val || (f.id === 'devis-email' && !f.val.includes('@'))) {
+      el.classList.add('error');
+      valid = false;
+    } else {
+      el.classList.remove('error');
+    }
+  });
+  if (!valid) {
+    alert('Veuillez remplir tous les champs obligatoires.');
+    return;
+  }
+  alert('Merci ' + nom + ' ! Votre demande a bien été envoyée. Nous vous recontactons sous 24h.');
+  // Reset form
+  fields.forEach(function(f) { document.getElementById(f.id).value = ''; });
+  document.getElementById('devis-budget').value = '';
+  document.getElementById('devis-tel').value = '';
+  document.getElementById('devis-whatsapp').value = '';
+}
+
+// ===== PORTFOLIO FILTER =====
+function filterPortfolio(cat, btn) {
+  document.querySelectorAll('.portfolio-filters button').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.portfolio-item').forEach(function(item) {
+    if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// ===== SUBSCRIPTION TOGGLE =====
+var subAnnual = false;
+function toggleSubscription() {
+  subAnnual = !subAnnual;
+  var toggle = document.getElementById('subToggle');
+  var monthly = document.getElementById('toggleMonthly');
+  var annual = document.getElementById('toggleAnnual');
+
+  toggle.classList.toggle('on', subAnnual);
+  monthly.classList.toggle('active-toggle', !subAnnual);
+  annual.classList.toggle('active-toggle', subAnnual);
+
+  document.querySelectorAll('.sub-price').forEach(function(el) {
+    var m = el.getAttribute('data-monthly');
+    var a = el.getAttribute('data-annual');
+    if (subAnnual) {
+      el.innerHTML = a + '€ <small>/mois HT</small>';
+    } else {
+      el.innerHTML = m + '€ <small>/mois HT</small>';
+    }
+  });
+}
+
+// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (href.length > 1) {
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>

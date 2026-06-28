@@ -54,7 +54,7 @@ Section déjà présente et conforme aux spécifications :
 Section déjà présente et conforme :
 - Titre "SiteRapide 360 — Tout inclus, zéro prise de tête" ✅
 - Prix 149€/mois HT ✅
-- Badge "Recommandé" ✅
+- Badge "Le plus populaire" ✅
 - 6 services inclus (hébergement, 8 posts, 1 article, chatbot, rapport, WhatsApp) ✅
 - Position : avant les autres packs ✅
 
@@ -70,8 +70,25 @@ Section déjà enrichie et conforme :
 
 ## Déploiement
 
-- Commit : `e1ee991` — poussé sur `master`
+- Commit : `2a46b26` — poussé sur `master`
 - Repo : https://github.com/Mahdi12900/siterapide-fr
 - Service CloudStation : `prj_integ_386e7518-a130-43e8-a836-4aad25c2b9d8`
 - URL : https://cst-siterapide-xur7bvwe.cloud-station.app
 - Redéploiement déclenché le 28/06/2026
+- SSL valide : 31/05/2026 → 29/08/2026
+
+## Vérification finale
+
+```
+[✅] HTTP 200 — temps de chargement 0.18s
+[✅] <title> contient "SiteRapide"
+[✅] <h1> hero présent
+[✅] Navigation (9 liens) présente
+[✅] Section Audit gratuit — 13 éléments détectés
+[✅] SiteRapide 360 — badge "Le plus populaire", 149€/mois
+[✅] Marchés & Subventions — ROI, témoignage BTP (4 marqueurs)
+[✅] Formulaire de devis — 8 éléments détectés
+[✅] Footer — 28 éléments détectés
+[✅] Certificat SSL valide
+[✅] Aucune trace IA résiduelle (markdown, emojis, symboles)
+```

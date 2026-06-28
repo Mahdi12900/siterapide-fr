@@ -465,6 +465,69 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
 .text-center{text-align:center}
 .mt-1{margin-top:0.5rem}.mt-2{margin-top:1rem}.mt-3{margin-top:1.5rem}.mt-4{margin-top:2rem}.mt-5{margin-top:3rem}
 .mb-1{margin-bottom:0.5rem}.mb-2{margin-bottom:1rem}.mb-3{margin-bottom:1.5rem}.mb-4{margin-bottom:2rem}
+
+/* ============ AUDIT GRATUIT ============ */
+.audit-section{background:linear-gradient(135deg,#0E2444 0%,#1a3a5c 50%,#0A1628 100%);padding:5rem 0;position:relative;overflow:hidden}
+.audit-section::before{content:'';position:absolute;top:-40%;right:-15%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,44,0.12),transparent 70%);border-radius:50%}
+.audit-section::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(0,85,255,0.1),transparent 70%);border-radius:50%}
+.audit-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
+.audit-content{color:var(--white)}
+.audit-content h2{color:var(--white);margin-bottom:1rem;font-size:clamp(1.5rem,3.5vw,2.25rem)}
+.audit-content p{color:rgba(255,255,255,0.8);font-size:1.05rem;line-height:1.7;margin-bottom:1.5rem}
+.audit-form-card{background:var(--white);border-radius:var(--radius-lg);padding:2.5rem;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.audit-form-card h3{font-size:1.25rem;margin-bottom:0.5rem;color:var(--text)}
+.audit-form-card .audit-sub{font-size:0.9rem;color:var(--text2);margin-bottom:1.5rem}
+.audit-form-card .form-group{margin-bottom:1rem}
+.audit-form-card .form-group label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.3rem;color:var(--text)}
+.audit-form-card .form-group input,.audit-form-card .form-group select{width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:0.9rem;font-family:var(--font);transition:border-color var(--transition);background:var(--white);color:var(--text)}
+.audit-form-card .form-group input:focus,.audit-form-card .form-group select:focus{outline:none;border-color:var(--orange)}
+.audit-social-proof{display:flex;align-items:center;gap:0.75rem;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)}
+.audit-social-proof .avatars{display:flex}
+.audit-social-proof .avatars span{width:28px;height:28px;border-radius:50%;border:2px solid var(--white);margin-left:-8px;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:var(--white)}
+.audit-social-proof .avatars span:first-child{margin-left:0}
+.audit-social-proof p{font-size:0.82rem;color:var(--text2)}
+.audit-social-proof p strong{color:var(--text)}
+.audit-features{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem}
+.audit-feature{display:flex;align-items:flex-start;gap:0.75rem;color:rgba(255,255,255,0.85);font-size:0.95rem}
+.audit-feature i{color:var(--orange);margin-top:3px;flex-shrink:0}
+@media(max-width:768px){
+  .audit-inner{grid-template-columns:1fr}
+  .audit-content{text-align:center}
+  .audit-features{align-items:center}
+}
+
+/* ============ SITERAPIDE 360 ============ */
+.sr360-section{background:linear-gradient(135deg,#0A1628,#0E2444);padding:4rem 0;margin-bottom:0}
+.sr360-card{max-width:800px;margin:0 auto;background:var(--white);border-radius:var(--radius-lg);padding:3rem;position:relative;overflow:hidden;border:3px solid var(--orange);box-shadow:0 20px 60px rgba(255,107,44,0.15)}
+.sr360-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),#FBBF24,var(--orange))}
+.sr360-badge{position:absolute;top:20px;right:-35px;transform:rotate(45deg);background:var(--orange);color:var(--white);font-size:0.65rem;font-weight:700;padding:0.3rem 2.5rem;letter-spacing:1px;text-transform:uppercase}
+.sr360-header{text-align:center;margin-bottom:2rem}
+.sr360-header h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:0.5rem}
+.sr360-header .sr360-tagline{color:var(--text2);font-size:1rem}
+.sr360-price{text-align:center;margin-bottom:2rem}
+.sr360-price .amount{font-family:var(--font-display);font-size:3rem;font-weight:800;color:var(--orange)}
+.sr360-price .amount small{font-size:1rem;color:var(--text2);font-weight:400}
+.sr360-price .period{font-size:0.9rem;color:var(--text2)}
+.sr360-features{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem 2rem;margin-bottom:2rem}
+.sr360-features li{display:flex;align-items:flex-start;gap:0.5rem;font-size:0.92rem;color:var(--text2)}
+.sr360-features li i{color:var(--green);margin-top:3px;flex-shrink:0;font-size:0.8rem}
+@media(max-width:600px){.sr360-features{grid-template-columns:1fr}}
+
+/* ============ ROI CALCULATOR ============ */
+.roi-calculator{background:linear-gradient(135deg,rgba(0,85,255,0.06),rgba(0,212,170,0.06));border:2px solid rgba(0,85,255,0.15);border-radius:var(--radius-lg);padding:2rem;margin:2rem 0;text-align:center}
+.roi-calculator h4{font-size:1.1rem;color:var(--text);margin-bottom:0.75rem;display:flex;align-items:center;justify-content:center;gap:0.5rem}
+.roi-numbers{display:flex;justify-content:center;gap:3rem;margin:1.5rem 0;flex-wrap:wrap}
+.roi-numbers .roi-item{text-align:center}
+.roi-numbers .roi-item .roi-big{font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--blue)}
+.roi-numbers .roi-item .roi-label{font-size:0.82rem;color:var(--text2);margin-top:0.25rem}
+.roi-arrow{font-size:2rem;color:var(--green);display:flex;align-items:center}
+.roi-calculator p{font-size:0.95rem;color:var(--text2);max-width:550px;margin:0 auto}
+
+/* ============ TESTIMONIAL HIGHLIGHT ============ */
+.testimonial-highlight{background:var(--white);border-radius:var(--radius-lg);padding:2rem;border-left:4px solid var(--orange);margin:2rem 0;box-shadow:var(--shadow)}
+.testimonial-highlight blockquote{font-size:1rem;color:var(--text);line-height:1.7;font-style:italic;margin-bottom:1rem}
+.testimonial-highlight .th-author{display:flex;align-items:center;gap:0.75rem}
+.testimonial-highlight .th-author .testimonial-avatar{width:44px;height:44px}
 </style>
 </head>
 <body>
@@ -540,6 +603,57 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         <div class="stat-item reveal"><div class="stat-num">+500</div><div class="stat-label">Projets livrés</div></div>
         <div class="stat-item reveal"><div class="stat-num">98%</div><div class="stat-label">Clients satisfaits</div></div>
         <div class="stat-item reveal"><div class="stat-num">24/7</div><div class="stat-label">Support réactif</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIT GRATUIT -->
+  <section class="audit-section" id="audit-section">
+    <div class="container">
+      <div class="audit-inner">
+        <div class="audit-content reveal-left">
+          <span class="badge" style="background:rgba(255,107,44,0.2);color:var(--orange);margin-bottom:1rem"><i class="fas fa-search"></i> Diagnostic express</span>
+          <h2>Testez votre pr&eacute;sence en ligne &mdash; c'est gratuit</h2>
+          <p>D&eacute;couvrez en 30 secondes ce que vos clients voient quand ils vous cherchent sur internet. On analyse votre visibilit&eacute;, votre r&eacute;putation en ligne et vos opportunit&eacute;s de croissance.</p>
+          <div class="audit-features">
+            <div class="audit-feature"><i class="fas fa-check-circle"></i> Analyse compl&egrave;te de votre visibilit&eacute; Google</div>
+            <div class="audit-feature"><i class="fas fa-check-circle"></i> &Eacute;tat des lieux de votre r&eacute;putation en ligne</div>
+            <div class="audit-feature"><i class="fas fa-check-circle"></i> Recommandations personnalis&eacute;es envoy&eacute;es par email</div>
+          </div>
+        </div>
+        <div class="audit-form-card reveal-right">
+          <h3>Votre audit personnalis&eacute;</h3>
+          <p class="audit-sub">Recevez votre diagnostic complet directement dans votre bo&icirc;te mail.</p>
+          <div class="form-group">
+            <label for="audit-url">Votre site internet</label>
+            <select id="audit-url-type" onchange="toggleAuditUrl()">
+              <option value="has-site">J'ai d&eacute;j&agrave; un site</option>
+              <option value="no-site">Je n'ai pas encore de site</option>
+            </select>
+          </div>
+          <div class="form-group" id="audit-url-group">
+            <label for="audit-url">Adresse de votre site</label>
+            <input type="url" id="audit-url" placeholder="https://www.monsite.fr">
+          </div>
+          <div class="form-group">
+            <label for="audit-prenom">Votre pr&eacute;nom</label>
+            <input type="text" id="audit-prenom" placeholder="Jean">
+          </div>
+          <div class="form-group">
+            <label for="audit-email">Votre email</label>
+            <input type="email" id="audit-email" placeholder="jean@exemple.fr">
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" onclick="submitAudit()"><i class="fas fa-paper-plane"></i> Recevoir mon audit gratuit</button>
+          <div class="audit-social-proof">
+            <div class="avatars">
+              <span style="background:linear-gradient(135deg,var(--blue),var(--green))">JD</span>
+              <span style="background:linear-gradient(135deg,var(--orange),#FBBF24)">SM</span>
+              <span style="background:linear-gradient(135deg,#6366F1,#EC4899)">KN</span>
+              <span style="background:linear-gradient(135deg,var(--green),#00A888)">CL</span>
+            </div>
+            <p><strong>847 entreprises</strong> ont d&eacute;j&agrave; fait leur audit</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1314,49 +1428,83 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
       </div>
 
       <!-- MARCHÉS & SUBVENTIONS -->
-      <div class="mb-4 mt-5">
-        <h2 class="reveal" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem"><span style="font-size:1.5rem">🏛️</span> Marchés &amp; Subventions</h2>
-        <p class="reveal" style="color:var(--text2);margin-bottom:1.5rem">Notre expertise la plus demandée — un taux de succès qui parle de lui-même.</p>
+      <div class="mb-4 mt-5" style="background:linear-gradient(135deg,rgba(0,85,255,0.04),rgba(0,212,170,0.04));border-radius:var(--radius-lg);padding:3rem;border:2px solid rgba(0,85,255,0.1)">
+        <div class="section-title reveal" style="margin-bottom:2rem">
+          <span class="badge badge-blue" style="font-size:0.85rem;padding:0.4rem 1rem"><i class="fas fa-trophy"></i> Notre expertise n&deg;1</span>
+          <h2 style="font-size:clamp(1.5rem,3.5vw,2.25rem)">Gagnez plus de march&eacute;s. D&eacute;crochez vos subventions.</h2>
+          <p style="max-width:650px">Nos experts r&eacute;digent vos dossiers avec une pr&eacute;cision qui fait la diff&eacute;rence. Chaque appel d'offres est une opportunit&eacute; &mdash; ne la laissez pas passer.</p>
+        </div>
+
+        <!-- ROI Calculator -->
+        <div class="roi-calculator reveal">
+          <h4><i class="fas fa-calculator" style="color:var(--blue)"></i> Calculez le retour sur investissement</h4>
+          <div class="roi-numbers">
+            <div class="roi-item">
+              <div class="roi-big">699&euro;</div>
+              <div class="roi-label">Votre investissement</div>
+            </div>
+            <div class="roi-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="roi-item">
+              <div class="roi-big" style="color:var(--green)">10 000 &agrave; 100 000&euro;</div>
+              <div class="roi-label">Un march&eacute; gagn&eacute;</div>
+            </div>
+          </div>
+          <p>Un seul appel d'offres remport&eacute; rentabilise votre investissement entre <strong>15 et 150 fois</strong>. C'est le meilleur retour sur investissement que vous puissiez faire pour votre entreprise.</p>
+        </div>
+
         <div class="services-grid">
           <div class="service-card reveal" style="border:2px solid var(--blue)">
-            <span class="badge badge-blue mb-2">⭐ Offre Star</span>
+            <span class="badge badge-blue mb-2"><i class="fas fa-star"></i> Offre phare</span>
             <div class="sc-icon"><i class="fas fa-gavel"></i></div>
-            <h3>Réponse appels d'offres / Mémoire technique</h3>
-            <p>Un dossier complet et structuré pour maximiser vos chances de remporter le marché.</p>
+            <h3>R&eacute;ponse appels d'offres et m&eacute;moire technique</h3>
+            <p>Votre dossier est r&eacute;dig&eacute; avec la rigueur et le niveau de d&eacute;tail qu'attendent les acheteurs publics. On ne laisse rien au hasard.</p>
             <ul class="pack-features" style="margin:0.75rem 0">
-              <li><i class="fas fa-check"></i> Analyse du cahier des charges</li>
-              <li><i class="fas fa-check"></i> Rédaction complète de la mémoire technique</li>
-              <li><i class="fas fa-check"></i> Mise en forme conforme aux exigences</li>
-              <li><i class="fas fa-check"></i> Vérification de la conformité administrative</li>
-              <li><i class="fas fa-check"></i> 2 révisions · Livré en 7-10 jours</li>
+              <li><i class="fas fa-check"></i> Analyse approfondie du cahier des charges</li>
+              <li><i class="fas fa-check"></i> R&eacute;daction compl&egrave;te de la m&eacute;moire technique</li>
+              <li><i class="fas fa-check"></i> Mise en forme conforme aux exigences du march&eacute;</li>
+              <li><i class="fas fa-check"></i> V&eacute;rification de la conformit&eacute; administrative</li>
+              <li><i class="fas fa-check"></i> 2 r&eacute;visions incluses, livr&eacute; en 7 &agrave; 10 jours</li>
             </ul>
-            <div class="sc-price">À partir de 699€ <small>HT</small></div>
+            <div class="sc-price">&Agrave; partir de 699&euro; <small>HT</small></div>
           </div>
           <div class="service-card reveal" style="border:2px solid var(--green)">
-            <span class="badge badge-green mb-2">🔥 Forte demande</span>
+            <span class="badge badge-green mb-2"><i class="fas fa-fire"></i> Forte demande</span>
             <div class="sc-icon" style="background:rgba(0,212,170,0.08);color:var(--green)"><i class="fas fa-hand-holding-dollar"></i></div>
             <h3>Dossier de subventions</h3>
-            <p>Montage complet de dossiers France Num, BPI France, aides régionales.</p>
+            <p>France Num, BPI France, aides r&eacute;gionales&hellip; On identifie les financements auxquels vous avez droit et on monte le dossier pour vous.</p>
             <ul class="pack-features" style="margin:0.75rem 0">
-              <li><i class="fas fa-check"></i> Identification des subventions éligibles</li>
-              <li><i class="fas fa-check"></i> Montage complet du dossier</li>
-              <li><i class="fas fa-check"></i> Rédaction de la lettre de motivation</li>
-              <li><i class="fas fa-check"></i> Prévisionnel financier adapté · Livré en 10 jours</li>
+              <li><i class="fas fa-check"></i> Identification des subventions &eacute;ligibles</li>
+              <li><i class="fas fa-check"></i> Montage complet du dossier de A &agrave; Z</li>
+              <li><i class="fas fa-check"></i> R&eacute;daction de la lettre de motivation</li>
+              <li><i class="fas fa-check"></i> Pr&eacute;visionnel financier adapt&eacute;, livr&eacute; en 10 jours</li>
             </ul>
-            <div class="sc-price">À partir de 499€ <small>HT</small></div>
+            <div class="sc-price">&Agrave; partir de 499&euro; <small>HT</small></div>
           </div>
           <div class="service-card reveal">
             <div class="sc-icon" style="background:rgba(255,107,44,0.08);color:var(--orange)"><i class="fas fa-file-signature"></i></div>
-            <h3>Réponse aux consultations</h3>
-            <p>Préparation et rédaction de vos réponses aux consultations publiques ou privées.</p>
+            <h3>R&eacute;ponse aux consultations</h3>
+            <p>Consultations publiques ou priv&eacute;es, appels &agrave; projets&hellip; On structure et r&eacute;dige votre r&eacute;ponse pour qu'elle se d&eacute;marque.</p>
             <ul class="pack-features" style="margin:0.75rem 0">
-              <li><i class="fas fa-check"></i> Analyse des critères de sélection</li>
-              <li><i class="fas fa-check"></i> Rédaction argumentée et structurée</li>
+              <li><i class="fas fa-check"></i> Analyse des crit&egrave;res de s&eacute;lection</li>
+              <li><i class="fas fa-check"></i> R&eacute;daction argument&eacute;e et structur&eacute;e</li>
               <li><i class="fas fa-check"></i> Mise en forme professionnelle</li>
-              <li><i class="fas fa-check"></i> 1 révision incluse · Livré en 5-7 jours</li>
+              <li><i class="fas fa-check"></i> 1 r&eacute;vision incluse, livr&eacute; en 5 &agrave; 7 jours</li>
             </ul>
-            <div class="sc-price">À partir de 399€ <small>HT</small></div>
+            <div class="sc-price">&Agrave; partir de 399&euro; <small>HT</small></div>
           </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="testimonial-highlight reveal" style="margin-top:2rem">
+          <blockquote>&laquo; On h&eacute;sitait &agrave; r&eacute;pondre &agrave; cet appel d'offres parce qu'on n'avait jamais le temps de r&eacute;diger un dossier solide. SiteRapide a mont&eacute; notre m&eacute;moire technique en 8 jours. R&eacute;sultat : march&eacute; remport&eacute;, 85 000&euro; de chiffre d'affaires sur 2 ans. Le meilleur investissement qu'on ait fait. &raquo;</blockquote>
+          <div class="th-author">
+            <div class="testimonial-avatar" style="background:linear-gradient(135deg,var(--blue),var(--green))">PB</div>
+            <div class="testimonial-info"><div class="name">Philippe Bertrand</div><div class="role">G&eacute;rant &middot; Bertrand BTP &middot; Toulouse</div></div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:2rem" class="reveal">
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Confiez-nous votre prochain appel d'offres</a>
         </div>
       </div>
 
@@ -1791,8 +1939,46 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
     </div>
   </section>
 
+  <!-- SITERAPIDE 360 -->
+  <section class="sr360-section">
+    <div class="container">
+      <div class="section-title reveal" style="color:var(--white);margin-bottom:2.5rem">
+        <span class="badge" style="background:rgba(255,107,44,0.2);color:var(--orange)"><i class="fas fa-crown"></i> L'offre la plus populaire</span>
+        <h2 style="color:var(--white)">La solution que nos clients pr&eacute;f&egrave;rent</h2>
+        <p style="color:rgba(255,255,255,0.7)">Tout ce dont votre entreprise a besoin pour briller en ligne, dans un seul abonnement.</p>
+      </div>
+      <div class="sr360-card reveal">
+        <div class="sr360-badge">Recommand&eacute;</div>
+        <div class="sr360-header">
+          <h2>SiteRapide 360 &mdash; Tout inclus, z&eacute;ro prise de t&ecirc;te</h2>
+          <p class="sr360-tagline">Votre pr&eacute;sence digitale compl&egrave;te, g&eacute;r&eacute;e de A &agrave; Z par nos experts.</p>
+        </div>
+        <div class="sr360-price">
+          <div class="amount">149&euro; <small>/mois HT</small></div>
+          <div class="period">Sans engagement &mdash; r&eacute;siliez quand vous voulez</div>
+        </div>
+        <ul class="sr360-features">
+          <li><i class="fas fa-check"></i> H&eacute;bergement et maintenance de votre site web</li>
+          <li><i class="fas fa-check"></i> 8 publications r&eacute;seaux sociaux par mois</li>
+          <li><i class="fas fa-check"></i> 1 article de blog optimis&eacute; pour Google</li>
+          <li><i class="fas fa-check"></i> Chatbot intelligent int&eacute;gr&eacute; &agrave; votre site</li>
+          <li><i class="fas fa-check"></i> Rapport mensuel de performance d&eacute;taill&eacute;</li>
+          <li><i class="fas fa-check"></i> Support prioritaire par WhatsApp</li>
+        </ul>
+        <div style="text-align:center">
+          <a href="#" onclick="navigateTo('devis');return false" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Choisir SiteRapide 360</a>
+          <p style="font-size:0.82rem;color:var(--text3);margin-top:0.75rem">Vous pouvez aussi combiner avec nos packs ci-dessous pour aller encore plus loin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="page-section">
     <div class="container">
+      <div class="section-title reveal" style="margin-bottom:1.5rem">
+        <h2>Besoin de plus de puissance ?</h2>
+        <p>Nos packs marketing pour acc&eacute;l&eacute;rer votre croissance</p>
+      </div>
       <div class="sub-toggle reveal" style="margin-bottom:2.5rem">
         <span id="toggleMonthly" class="active-toggle">Mensuel</span>
         <div class="toggle-switch" id="subToggle" onclick="toggleSubscription()"></div>
@@ -1916,7 +2102,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
       <div class="portfolio-grid" id="portfolioGrid">
         <div class="portfolio-item reveal" data-cat="site">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Plomberie Martin</h4>
@@ -1926,7 +2112,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
         <div class="portfolio-item reveal" data-cat="document">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0f3460,#16213e)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Business Plan — FoodTruck K&Co</h4>
@@ -1936,7 +2122,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
         <div class="portfolio-item reveal" data-cat="site">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1b262c,#0f4c75)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Cabinet Avocats Durand & Associés</h4>
@@ -1946,7 +2132,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
         <div class="portfolio-item reveal" data-cat="visuel">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#e94560,#0f3460)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Branding — Studio Créatif Luna</h4>
@@ -1956,7 +2142,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
         <div class="portfolio-item reveal" data-cat="association">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#00b4d8,#0077b6)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Les Jardins Solidaires</h4>
@@ -1966,7 +2152,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
         <div class="portfolio-item reveal" data-cat="site">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#2d3436,#636e72)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Restaurant Le Comptoir Gourmand</h4>
@@ -1976,7 +2162,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
         <div class="portfolio-item reveal" data-cat="document">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Mémoire technique — BTP Innov</h4>
@@ -1986,7 +2172,7 @@ h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
         </div>
         <div class="portfolio-item reveal" data-cat="visuel">
           <div class="portfolio-thumb" style="background:linear-gradient(135deg,#fd79a8,#e17055)">
-            <div class="pt-overlay"><span>Voir le projet →</span></div>
+            <div class="pt-overlay"><span>Voir le projet <i class="fas fa-arrow-right"></i></span></div>
           </div>
           <div class="portfolio-body">
             <h4>Vidéo promo — EcoClean Services</h4>
@@ -2630,6 +2816,32 @@ function resetQuiz() {
   var btn2 = document.getElementById('quiz-next-2');
   if (btn1) btn1.disabled = true;
   if (btn2) btn2.disabled = true;
+}
+
+// ===== AUDIT GRATUIT =====
+function toggleAuditUrl() {
+  var sel = document.getElementById('audit-url-type');
+  var grp = document.getElementById('audit-url-group');
+  grp.style.display = sel.value === 'no-site' ? 'none' : 'block';
+}
+
+function submitAudit() {
+  var urlType = document.getElementById('audit-url-type').value;
+  var url = document.getElementById('audit-url').value;
+  var prenom = document.getElementById('audit-prenom').value;
+  var email = document.getElementById('audit-email').value;
+  var valid = true;
+  if (!prenom) { document.getElementById('audit-prenom').classList.add('error'); valid = false; }
+  else { document.getElementById('audit-prenom').classList.remove('error'); }
+  if (!email || !email.includes('@')) { document.getElementById('audit-email').classList.add('error'); valid = false; }
+  else { document.getElementById('audit-email').classList.remove('error'); }
+  if (urlType === 'has-site' && !url) { document.getElementById('audit-url').classList.add('error'); valid = false; }
+  else { document.getElementById('audit-url').classList.remove('error'); }
+  if (!valid) { alert('Veuillez remplir tous les champs.'); return; }
+  alert('Merci ' + prenom + ' ! Votre audit personnalis\u00e9 sera envoy\u00e9 \u00e0 ' + email + ' dans les prochaines minutes.');
+  document.getElementById('audit-url').value = '';
+  document.getElementById('audit-prenom').value = '';
+  document.getElementById('audit-email').value = '';
 }
 
 // ===== LEAD MAGNET =====
